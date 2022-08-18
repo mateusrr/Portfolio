@@ -145,7 +145,7 @@ h1 {
 }
 
 .card {
-    margin: 3rem;
+    margin: 1.5rem;
     border-radius: 10px;
     width: 20rem;
     height: 20rem;
@@ -169,7 +169,6 @@ h1 {
 
 .card-top p {
     height: 2vh;
-    margin: 3rem;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
     font-size: 1rem;
@@ -189,6 +188,8 @@ h1 {
     align-items: center;
     font-size: 15px;
 }
+
+/* MEDIA */
 
 @media (max-width: 800px) {
     .social-media {
@@ -212,16 +213,48 @@ h1 {
     .card {
         height: 250px;
         width: 250px;
+        margin: auto;
+        margin-top: 30px;
+    }
+    .card-top p {
+        margin-top: 1rem;
     }
 
     .card-text {
         width: 90%;
-        margin-top: 2rem;
         text-align: center;
     }
 
     .card:hover > .card-wrapper::before {
         height: 190px;
         width: 190px;
+    }
+}
+
+@media (max-width: 645px) {
+    .header-wrapper h1 {
+        text-align: center;
+    }
+
+    .card-photo {
+        display: none;
+    }
+}
+
+@media (max-width: 444px) {
+    .footer {
+        text-align: center;
+        font-size: 13px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 287px) {
+    /*cabeçalho*/
+    .divbar ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
     }
 }
