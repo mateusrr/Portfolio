@@ -1,0 +1,19 @@
+$white: #fff;
+$blue: #0088ff;
+$yellow: #f3c301;
+$blueDark3: #090a1a;
+$blueDark: #0a3d6a;
+$blueDark2: #171c4d;
+
+%content-align-center {
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/*botões - ícones sociais*/
+%transition-hover {
+    background: #0a3d6a;
+    transition: 0.3s all linear;
+}

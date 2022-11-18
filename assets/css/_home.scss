@@ -1,0 +1,155 @@
+.home {
+    @extend %content-align-center;
+    min-height: 600px;
+    display: flex;
+    padding-top: 7rem;
+    animation: appear 2s;
+}
+
+@keyframes appear {
+    0% {
+        transform:scale(50%);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.home-content {
+    @extend %content-align-center;
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-img {
+    width: 170px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+.home-text {
+    @extend %content-align-center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .color {
+        color: $blue;
+    }
+
+    h3 {
+        position: relative;
+        display: flex;
+        column-gap: 0.5rem;
+        align-items: center;
+        font-size: 1.1rem;
+        color: $blue;
+    }
+
+    h2 {
+        font-size: 3.5rem;
+        line-height: 4.8rem;
+    }
+
+    p {
+        font-size: 0.938rem;
+        margin-bottom: 1.5rem;
+    }
+
+    
+}
+
+.social {
+    @extend %content-align-center;
+    display: flex;
+    column-gap: 0.5rem;
+
+    .bx {
+        font-size: 1.3rem;
+        padding: 10px;
+        border-radius: 50%;
+        color: $white;
+        background-color: $blue;
+
+        &:hover {
+            background: $blueDark;
+            transition: 0.3s all linear;
+        }
+    }
+}
+
+.line {
+    background: $blue;
+    border: 1px solid $blue;
+
+    width: 30%;
+    margin: 30px auto;
+}
+
+.heading {
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: $white;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.about-content {
+    text-align: center;
+}
+
+.about-data {
+    display: flex;
+    flex-direction: column;
+    @extend %content-align-center;
+    
+    span {
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $white;
+    }
+
+    h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 2.6rem;
+        margin: 1rem 0;
+    }
+
+    .btn {
+        font-size: 0.97rem;
+        color: $white;
+        background: $blue;
+        padding: 12px 16px;
+        border-radius: 0.4rem;
+        width: 200px;
+        margin: 22px;
+
+        .bx {
+            font-size: 1.2rem;
+        }
+
+        &:hover {
+            @extend %transition-hover;
+        }
+    }
+
+}
+
+.about-text p {
+    font-size: 0.938rem;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}

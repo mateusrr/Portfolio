@@ -2,138 +2,229 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+    <title>Mateus</title>
 </head>
 <body>
-    <div class="divbar">
-            <nav>
-                <ul>
-                    <li><a href = "#inicio">Início</a></li>
-                    <li><a href = "#sobre">Sobre mim</a></li>
-                    <li><a href = "#portfolio">Portfólio</a></li>
-                </ul>
-            </nav>
-    </div>
-    <header class="header-wrapper" id="inicio">
-        <p>Olá! Eu sou,</p>
-        <h1>Mateus da Rocha Rodrigues</h1>
-        <div class="medias-socias">
-            <a href="https://github.com/mateusrr/"><i class="fa fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/mateusrr" target="_blank"><i class="fa fa-linkedin"></i></a>
+    <header>
+        <div class="nav container">
+            <a href="#" class="logo"> MRR</a>
+        
+            <ul class="navbar">
+                <li><a href="#home" class="nav-link">Início</a></li>
+                <li><a href="#about" class="nav-link">Sobre</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
+                <li><a href="#contact" class="nav-link">Contato</a></li>
+            </ul>
+
+            <!--menu-->
+            <div class="menu-icon">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
         </div>
     </header>
-    <div class="container-sobre" id="sobre">
-        <div class="card-sobre">
-            <div class="card-text">
-                <p>Estou no 6º período de Engenharia da Computação, tenho focado no Desenvolvimento Web e venho estudando sobre HTML, CSS, Javascript, NodeJS, React<br><br> 
-                Tenho utilizado a plataforma da Rocketseat, Udemy, além de alguns Bootcamps para obter esses conhecimentos.<br><br>Busco me aperfeiçoar a cada dia para qualificar os estudos e consequentemente obter uma oportunidade  de ingressar nessa área, contribuindo ativamente para o desenvolvimento da empresa.<br><br>Tenho como hobby a leitura, tocar violão e o design gráfico.</p>        
-            </div>
-            <div class="card-photo">
-                <div class="card-wrapper">
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <section class="cloud bg-projects" id="portfolio">
-        <div class="card-container">
-            <div class="card-top">
-                <div class="card">
-                    <a href="https://mateusrr.github.io/page/" target="_blank">
-                        <img src="./img/landingPage.PNG" class="card-img">
-                    </a>
-                </div>
-                    <p>Landing Page</p>
+    <!--home-->
+    <section class="home" container="nome" id="home">
+        <div class="home-content">
+            <div class="home-img">
+                <img src="./assets/img/1667572730390.jpg" alt="">
             </div>
-            
-            <div class="card-top">
-                <div class="card">
-                    <a href="https://mateusrr.github.io/tela-de-login/" target="_blank">
-                        <img src="./img/telaLogin.PNG" class="card-img">
-                    </a>
-                </div>
-                    <p>Tela de login / Cadastro</p>
-            </div>
+            <div class="home-text">
+                <h3>Olá!</h3>
+                <h2>Eu sou Mateus.</h2>
+                <p>
+                    Graduando em Engenharia da Computação.
+                </p>
 
-            <div class="card-top">
-                <div class="card">
-                    <a href="https://mateusrr.github.io/website/" target="_blank">
-                        <img src="./img/website.PNG" class="card-img">
-                    </a>
+                <!--social media-->
+                <div class="social">
+                    <a href="https://www.github.com/mateusrr/" target="_blank"><i class="bx bxl-github"></i></a>
+                    <a href="https://www.linkedin.com/in/mateusrr/" target="_blank"><i class="bx bxl-linkedin"></i></a>
                 </div>
-                    <p>Website</p>
-            </div>
-
-            <div class="card-top">
-                <div class="card">
-                    <a href="https://mateusrr.github.io/Calculadora//" target="_blank">
-                        <img src="./img/calculadora.png" class="card-img">
-                    </a>
-                </div>
-                    <p>Calculadora</p>
-            </div>
-
-            <div class="card-top">
-                <div class="card">
-                    <a href="https://mateusrr.github.io/listaDeTarefa/" target="_blank">
-                        <img src="./img/listaTarefas.png" class="card-img">
-                    </a>
-                </div>
-                    <p>Lista de tarefas</p>
-            </div>
-
-            <div class="card-top">
-                <div class="card">
-                    <a href="https://mateusrr.github.io/calculo-imc/" target="_blank">
-                        <img src="./img/imc.PNG" class="card-img">
-                    </a>
-                </div>
-                    <p>Cálculo IMC</p>
-            </div>
-
-            <div class="card-top">
-                <div class="card">
-                    <a href="https://mateusrr.github.io/cronometro/" target="_blank">
-                        <img src="./img/timer.PNG" class="card-img">
-                    </a>
-                </div>
-                    <p>Cronômetro</p>
-            </div>
-
-            <div class="card-top">
-                <div class="card">
-                    <a href="https://mateusrr.github.io/memoryGame/" target="_blank">
-                        <img src="./img/jogoM.PNG" class="card-img">
-                    </a>
-                </div>
-                    <p>Jogo da memória</p>
-            </div>
-
-            <div class="card-top">
-                <div class="card">
-                    <a href="https://mateusrr.github.io/jogoDaVelha/" target="_blank">
-                        <img src="./img/jogodv.gif" class="card-img">
-                    </a>
-                </div>
-                    <p>Jogo da velha</p>
-            </div>
-
-            <div class="card-top">
-                <div class="card">
-                    <a href="https://mateusrr.github.io/frases/" target="_blank">
-                        <img src="./img/frases.png" class="card-img">
-                    </a>
-                </div>
-                    <p>Gerador de frases</p>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
-        Copyright © 2022 - Desenvolvido por Mateus da Rocha Rodrigues.
-    </footer>
+    <!--about-->
+    <section class="about container" id="about">
+        <h2 class="heading">Sobre</h2>
+        <div class="about-content">
+            <div class="about-data">
+                <div class="about-text">
+                    <p>Venho estudando sobre HTML, CSS, Sass, Javascript, NodeJS, React.<br>
+                    Utilizando as plataformas da Rocketseat (Discover e Ignite) e Udemy.</p>
+                    <p>Busco me aperfeiçoar a cada dia para qualificar os estudos e<br>consequentemente obter uma oportunidade de ingressar
+                    nessa área,<br>contribuindo ativamente para o desenvolvimento da empresa.</p>
+                </div>
+
+                <a href="/assets/pdf/currículo.pdf" target="_blank" class="btn" download="curriculo-mateus">
+                    Baixar CV
+                    <i class="bx bx-download"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!--portfolio-->
+    <section class="portfolio container" id="portfolio">
+        <h2 class="heading">Portfólio</h2>
+        <!--1-->
+        <div class="portfolio-content card">
+            <div class="portfolio-box">
+                <img src="/assets/img/website.png" alt="" class="portfolio-img">
+                <div class="portfolio-overlay">
+                    <h2>Website</h2>
+                    <a href="https://mateusrr.github.io/website/" target="_blank">
+                        <i class="bx bx-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+            <!--2-->
+            <div class="portfolio-box">
+                <img src="/assets/img/calculadora.png" alt="" class="portfolio-img">
+                <div class="portfolio-overlay">
+                    <h2>Calculadora</h2>
+                    <a href="https://mateusrr.github.io/Calculadora//" target="_blank">
+                        <i class="bx bx-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+            <!--3-->
+            <div class="portfolio-box">
+                <img src="/assets/img/list.png" alt="" class="portfolio-img">
+                <div class="portfolio-overlay">
+                    <h2>Lista de tarefa</h2>
+                    <a href="https://mateusrr.github.io/listaDeTarefa/" target="_blank">
+                        <i class="bx bx-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+            <!--4-->
+            <div class="portfolio-box">
+                <img src="/assets/img/pokeapi.png" alt="" class="portfolio-img">
+                <div class="portfolio-overlay">
+                    <h2>Pokédex</h2>
+                    <a href="https://mateusrr.github.io/ListandoPokemon/" target="_blank">
+                        <i class="bx bx-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+            <!--5-->
+            <div class="portfolio-box">
+                <img src="/assets/img/imc.png" alt="" class="portfolio-img">
+                <div class="portfolio-overlay">
+                    <h2>IMC</h2>
+                    <a href="https://mateusrr.github.io/calculo-imc/" target="_blank">
+                        <i class="bx bx-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+            <!--6-->
+            <div class="portfolio-box">
+                <img src="/assets/img/timer.png" alt="" class="portfolio-img">
+                <div class="portfolio-overlay">
+                    <h2>Cronômetro</h2>
+                    <a href="https://mateusrr.github.io/cronometro/" target="_blank">
+                        <i class="bx bx-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+            <!--7-->
+            <div class="portfolio-box">
+                <img src="/assets/img/memoria.png" alt="" class="portfolio-img">
+                <div class="portfolio-overlay">
+                    <h2>Jogo da memória</h2>
+                    <a href="https://mateusrr.github.io/memoryGame/" target="_blank">
+                        <i class="bx bx-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+            <!--8-->
+            <div class="portfolio-box">
+                <img src="/assets/img/jogov.png" alt="" class="portfolio-img">
+                <div class="portfolio-overlay">
+                    <h2>Jogo da velha</h2>
+                    <a href="https://mateusrr.github.io/jogoDaVelha/" target="_blank">
+                        <i class="bx bx-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+            <!--9-->
+            <div class="portfolio-box">
+                <img src="/assets/img/frases.png" alt="" class="portfolio-img">
+                <div class="portfolio-overlay">
+                    <h2>Frases</h2>
+                    <a href="https://mateusrr.github.io/frases/" target="_blank">
+                        <i class="bx bx-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+            <!--10-->
+            <div class="portfolio-box">
+                <img src="/assets/img/pinterest.png" alt="" class="portfolio-img">
+                <div class="portfolio-overlay">
+                    <h2>Clone Pinterest</h2>
+                    <a href="https://mateusrr.github.io/clone-pinterest/">
+                        <i class="bx bx-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+            <!--11-->
+            <div class="portfolio-box">
+                <img src="/assets/img/login.png" alt="" class="portfolio-img">
+                <div class="portfolio-overlay">
+                    <h2>Tela de login</h2>
+                    <a href="https://mateusrr.github.io/tela-de-login/">
+                        <i class="bx bx-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+            <!--12-->
+            <div class="portfolio-box">
+                <img src="/assets/img/page.png" alt="" class="portfolio-img">
+                <div class="portfolio-overlay">
+                    <h2>Landing page</h2>
+                    <a href="https://mateusrr.github.io/page/">
+                        <i class="bx bx-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--contact form-->
+    <section class="contact container" id="contact">
+        <h2 class="heading">Contato</h2>
+        <form action="" class="contact-form" id="contact-form">
+            <input type="text" placeholder="Seu nome" class="name" required>
+            <input type="email" placeholder="email@email.com" class="email" required>
+            <textarea cols="30" rows="10" placeholder="Digite sua mensagem..." class="message" required></textarea>
+            <input type="submit" value="Send" id="btn" class="send-btn">
+        </form>
+    </section>
+
+    <section class="footer-container footer" id="footer">
+        <div class="social">
+            <a href="https://www.github.com/mateusrr/" target="_blank"><i class="bx bxl-github"></i></a>
+            <a href="https://www.linkedin.com/in/mateusrr/" target="_blank"><i class="bx bxl-linkedin"></i></a>
+        </div>
+        <p>&#169; Mateus da Rocha Rodrigues 2022.</p>
+    </section>
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('5jYzXfeBRnCQ-S3Au');
+        })();
+    </script>
+<script src="./assets/js/main.js"></script>
 </body>
 </html>

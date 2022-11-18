@@ -1,0 +1,56 @@
+.portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    .portfolio-box {
+        position: relative;
+        width: 100%;
+        height: 250px;
+        border-radius: 1rem;
+        overflow: hidden;
+
+        &:hover .portfolio-overlay{
+            top: 0;
+            transition: 0.4s all ease 0s;
+        }
+    }
+
+    .portfolio-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .portfolio-overlay {
+        @extend %content-align-center;
+        position: absolute;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        background: hsl(234, 45%, 16%, 0.7);
+
+        h2 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+
+        }
+
+        .bx {
+            font-size: 24px;
+            padding: 10px;
+            background: $blue;
+            border-radius: 5px;
+            color: $white;
+
+            &:hover {
+                @extend %transition-hover;
+            }
+        }
+    }
+}
