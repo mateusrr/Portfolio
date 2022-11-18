@@ -11,7 +11,7 @@
 </p>
 
 <h2>Descrição do Projeto</h2>
-<p>Portfólio desenvolvido com HTML, SCSS, Javascript, contendo alguns projetos que fiz.</p>
+ <p><a href="https://mateusrr.github.io/Portfolio" target="_blank">Portfólio</a> desenvolvido com HTML, SCSS, Javascript, contendo alguns projetos que fiz.</p>
 
 <h2>Acesso aos projetos</h2>
 <p>
