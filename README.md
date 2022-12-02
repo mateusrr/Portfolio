@@ -14,12 +14,13 @@
 
 <h2>Acesso aos projetos</h2>
 <p>
-Landing page - <a href="https://mateusrr.github.io/page/" target="_blank"> link.</a><br>
- Tela de login - <a href="https://mateusrr.github.io/tela-de-login/" target="_blank"> link.</a><br>
- Website - <a href="https://mateusrr.github.io/website/" target="_blank"> link.</a><br>
- Calculadora - <a href="https://mateusrr.github.io/Calculadora//" target="_blank"> link.</a><br>
- Lista de tarefas - <a href="https://mateusrr.github.io/listaDeTarefa/" target="_blank"> link.</a><br>
- Cálculo IMC - <a href="https://mateusrr.github.io/calculo-imc/" target="_blank"> link.</a><br>
- Cronômetro - <a href="https://mateusrr.github.io/cronometro/" target="_blank"> link.</a><br>
- Jogo da memória - <a href="https://mateusrr.github.io/memoryGame/" target="_blank"> link.</a><br>
+• Landing page - <a href="http://github.com/mateusrr/page/" target="_blank"> link.</a><br>
+• Tela de login - <a href="http://github.com/mateusrr/tela-de-login/" target="_blank"> link.</a><br>
+• Website - <a href="http://github.com/mateusrr/website/" target="_blank"> link.</a><br>
+• Calculadora - <a href="http://github.com/mateusrr/Calculadora//" target="_blank"> link.</a><br>
+• Lista de tarefas - <a href="http://github.com/mateusrr/listaDeTarefa/" target="_blank"> link.</a><br>
+• Cálculo IMC - <a href="http://github.com/mateusrr/calculo-imc/" target="_blank"> link.</a><br>
+• Cronômetro - <a href="http://github.com/mateusrr/cronometro/" target="_blank"> link.</a><br>
+• Jogo da memória - <a href="http://github.com/mateusrr/memoryGame/" target="_blank"> link.</a><br>
+• Calculadora de gorjeta - <a href="http://github.com/mateusrr/TipCalculator/" target="_blank"> link.</a><br>
  </p>

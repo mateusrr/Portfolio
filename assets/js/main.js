@@ -3,7 +3,7 @@ let menu = document.querySelector('.menu-icon');
 menu.onclick = () => {
     menu.classList.toggle("move");
 }
-/*
+
 function validate() {
     let name = document.querySelector(".name");
     let email = document.querySelector(".email");
@@ -12,7 +12,7 @@ function validate() {
 
     sendBtn.addAdventListener("click", (e) => {
         e.preventDefault();
-        if(name.value == "" || email.value == "" || msg.value == "") {
+        if(name.value == "" || msg.value == "") {
             emptyerror();
         } else {
             sendmail(name.value, email.value, msg.value);
@@ -22,14 +22,14 @@ function validate() {
 }
 validate();
 
-function sendmail(name, email, msg) {
-    emailjs.send("service_t0kfmjs","template_d4i1n3r",{
-        from_name: msg,
-        to_name: name,
+function sendmail(name, msg) {
+    emailjs.send("service_7cem6x4","template_87dzzq1", {
+        from_name: name,
+        to_name: "Mateus",
         mensagem: msg,
         });
 }
-
+/*
 function emptyerror() {
     swal({
         title: "Oh no!",
@@ -46,6 +46,7 @@ function success() {
       });
 }*/
 
+/*
 const btn = document.getElementById('btn');
 
 document.getElementById('contact-form')
@@ -57,6 +58,21 @@ document.getElementById('contact-form')
    const serviceID = 'default_service';
    const templateID = 'template_d4i1n3r';
 
+   function sendmail(name, email, msg) {
+    emailjs.sendForm("service_7cem6x4","template_87dzzq1",{
+        from_name: msg,
+        to_name: name,
+        mensagem: msg,
+    });
+    .then(() => {
+        btn.value = 'Send Email';
+        alert('Sent!');
+      }, (err) => {
+        btn.value = 'Send Email';
+        alert(JSON.stringify(err));
+      });
+}
+
    emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
       btn.value = 'Send Email';
@@ -65,7 +81,7 @@ document.getElementById('contact-form')
       btn.value = 'Send Email';
       alert(JSON.stringify(err));
     });
-});
+});*/
 
 
 

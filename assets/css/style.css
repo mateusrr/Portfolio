@@ -308,6 +308,7 @@ header .nav-link:hover {
   font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 10px;
+  text-align: center;
 }
 .portfolio-content .portfolio-overlay .bx {
   font-size: 24px;
