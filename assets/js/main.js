@@ -29,62 +29,6 @@ function sendmail(name, msg) {
         mensagem: msg,
         });
 }
-/*
-function emptyerror() {
-    swal({
-        title: "Oh no!",
-        text: "Field cannot be empty!",
-        icon: "error",
-      });
-}
-
-function success() {
-    swal({
-        title: "E-mail enviado com sucesso!",
-        text: "Aguarde o retorno.",
-        icon: "success",
-      });
-}*/
-
-/*
-const btn = document.getElementById('btn');
-
-document.getElementById('contact-form')
- .addEventListener('submit', function(event) {
-   event.preventDefault();
-
-   btn.value = 'Sending...';
-
-   const serviceID = 'default_service';
-   const templateID = 'template_d4i1n3r';
-
-   function sendmail(name, email, msg) {
-    emailjs.sendForm("service_7cem6x4","template_87dzzq1",{
-        from_name: msg,
-        to_name: name,
-        mensagem: msg,
-    });
-    .then(() => {
-        btn.value = 'Send Email';
-        alert('Sent!');
-      }, (err) => {
-        btn.value = 'Send Email';
-        alert(JSON.stringify(err));
-      });
-}
-
-   emailjs.sendForm(serviceID, templateID, this)
-    .then(() => {
-      btn.value = 'Send Email';
-      alert('Sent!');
-    }, (err) => {
-      btn.value = 'Send Email';
-      alert(JSON.stringify(err));
-    });
-});*/
-
-
-
 
 
 let header = document.querySelector('header')
@@ -92,17 +36,3 @@ let header = document.querySelector('header')
 window.addEventListener("scroll", () => {
     header.classList.toggle('header-active', window.scrollY > 0);
 })
-
-var button = document.getElementById('button');
-
-button.addEventListener('click', function() {
-    var card = document.querySelector('card');
-    card.classList.toggle('active');
-
-    if(card.classList.contains('active')) {
-        return button.textContent = 'ver menos';
-    }
-
-    button.textContent = 'ver mais';
-
-});

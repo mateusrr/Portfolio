@@ -82,13 +82,13 @@ header .navbar {
   -moz-column-gap: 1.5rem;
        column-gap: 1.5rem;
 }
-header .nav-link {
+header .navbar .nav-link {
   font-size: 0.94rem;
   padding: 4px 8px;
   border-radius: 0.2rem;
   color: #fff;
 }
-header .nav-link:hover {
+header .navbar .nav-link:hover {
   color: #0a3d6a;
   background: #f3c301;
   transition: 0.3s all linear;
