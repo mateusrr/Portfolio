@@ -24,4 +24,6 @@ Cálculo IMC - <a href="https://www.github.com/mateusrr/calculo-imc/" target="_b
 Cronômetro - <a href="https://www.github.com/mateusrr/cronometro/" target="_blank"> link.</a><br>
 Jogo da memória - <a href="https://www.github.com/mateusrr/memoryGame/" target="_blank"> link.</a><br>
 Calculadora de gorjeta - <a href="https://www.github.com/mateusrr/TipCalculator/" target="_blank"> link.</a><br>
+Feed - Trilha Ignite - <a href="https://trilha-ignite-fundamentos-reactjs-ts.vercel.app/" target="_blank"> link.</a><br>
+Desafio 01 - Trilha Ignite - <a href="https://trilha-ignite-reactjs-desafio01.vercel.app/" target="_blank"> link.</a><br>
  </p>
