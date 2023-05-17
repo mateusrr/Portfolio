@@ -16,7 +16,7 @@ export default function ZoomIcon({ href, icon, ariaLabel }: ZoomIconProps) {
         transition="all 0.2s ease-out"
         _hover={{
           transform: 'scale(1.1)',
-          color: 'yellow.500',
+          color: 'blue.500',
         }}
         as="a"
         minW={0}

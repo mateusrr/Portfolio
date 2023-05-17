@@ -1,11 +1,12 @@
-import { Box, Flex, Text } from '@chakra-ui/react'
+import { Flex, Text } from '@chakra-ui/react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import Line from './Line'
 import SocialMedia from './SocialMedia'
+import BoxColor from './BoxColor'
 
 export default function Footer() {
   return (
-    <Box position="relative" color="white">
+    <BoxColor position="relative">
       <Line />
 
       <Flex
@@ -14,11 +15,10 @@ export default function Footer() {
         fontSize="xs"
         flexDir="row"
         align="center"
-        color="gray.500"
         justify="center"
         gap={2}
       >
-        <Text mr={470}>© 2023 MRR. Todos os direitos reservados.</Text>
+        <Text mr={470}>© 2023 &#60;MR&#62; Todos os direitos reservados.</Text>
 
         <SocialMedia
           href="https://github.com/mateusrr"
@@ -31,6 +31,6 @@ export default function Footer() {
           ariaLabel="Linkedin"
         />
       </Flex>
-    </Box>
+    </BoxColor>
   )
 }

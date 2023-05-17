@@ -19,7 +19,7 @@ const linkProps: Omit<LinkProps, 'position'> & {
       position: 'absolute',
       bottom: 0,
       left: 0,
-      backgroundColor: 'yellow.500',
+      backgroundColor: 'blue.500',
       transition: 'all 0.3s',
     },
   },

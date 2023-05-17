@@ -8,10 +8,8 @@ import {
   ModalBody,
   ModalFooter,
   Flex,
-  Icon,
   useDisclosure,
 } from '@chakra-ui/react'
-import { FaGitSquare } from 'react-icons/fa' // Exemplo de ícones do Font Awesome
 import Languages from './Languages'
 
 const IconModal = () => {

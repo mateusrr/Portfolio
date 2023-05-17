@@ -1,21 +1,15 @@
 import React from 'react'
-import { Box, Flex, Heading, Text, useColorMode } from '@chakra-ui/react'
+import { Box, Flex, Heading, Text } from '@chakra-ui/react'
 import Header from '@/components/Header/index'
-import { motion } from 'framer-motion'
 import { BsLinkedin, BsGithub } from 'react-icons/bs'
 import SocialMedia from '../components/SocialMedia'
 import Footer from '@/components/Footer'
+import BoxColor from '@/components/BoxColor'
+import MotionEffect from '@/components/MotionEffect'
 
-const Motion = motion(Box)
 export default function Home() {
-  const { colorMode } = useColorMode()
-
   return (
-    <Box
-      bg={colorMode === 'light' ? 'white' : 'blackAlpha.900'}
-      transition="background-color 0.2s"
-      color={colorMode === 'light' ? 'black' : 'gray.100'}
-    >
+    <BoxColor>
       <Header />
 
       <Flex
@@ -24,20 +18,14 @@ export default function Home() {
         justify="center"
         height="calc(100vh - 82px)"
       >
-        <Motion
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          align="left"
-          justify="center"
-        >
+        <MotionEffect align="left">
           <Box fontWeight="medium">
             <Heading as="h2" size="xl" fontWeight="normal">
               Olá! Eu sou,
             </Heading>
-            <Heading as="h1" m="1rem 0" size="4xl">
+            <Heading as="h1" m="0.275rem 0" size="4xl">
               Mateus Rocha
-              <span style={{ color: 'yellow', fontSize: '3rem' }}>.</span>
+              <span style={{ color: 'blue', fontSize: '3rem' }}>.</span>
             </Heading>
             <Text fontSize="md" letterSpacing={2} fontWeight="normal">
               Desenvolvedor Front-End.
@@ -55,10 +43,10 @@ export default function Home() {
               ariaLabel="Linkedin"
             />
           </Flex>
-        </Motion>
+        </MotionEffect>
       </Flex>
 
       <Footer />
-    </Box>
+    </BoxColor>
   )
 }
