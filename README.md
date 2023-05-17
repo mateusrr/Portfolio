@@ -1,27 +1,34 @@
-<div align="center">
-<h1>Portfólio</h1>
-<p align="center">
-<img src="https://user-images.githubusercontent.com/72825535/202706044-3ae95582-3417-4334-859a-13edd1e5fd28.gif">
-</p>
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-<p align="center"> <img src="https://img.shields.io/github/license/mateusrr/listaDeTarefa"/></p>
+## Getting Started
 
-<p align="center">
-<img src="http://img.shields.io/static/v1?label=STATUS&message=finalizado%20&color=BLUE&style=for-the-badge"/>
-</p>
+First, run the development server:
 
-<h2>Descrição do Projeto</h2>
- <p><a href="https://mateusrr.github.io/Portfolio" target="_blank">Portfólio</a> desenvolvido com HTML, SCSS, Javascript, contendo alguns projetos que fiz.</p>
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+```
 
-<h2>Acesso aos projetos</h2>
-<p>
-Landing page - <a href="https://www.github.com/mateusrr/page/" target="_blank"> link.</a><br>
-Tela de login - <a href="https://www.github.com/mateusrr/tela-de-login/" target="_blank"> link.</a><br>
-Website - <a href="https://www.github.com/mateusrr/website/" target="_blank"> link.</a><br>
-Calculadora - <a href="https://www.github.com/mateusrr/Calculadora//" target="_blank"> link.</a><br>
-Lista de tarefas - <a href="https://www.github.com/mateusrr/listaDeTarefa/" target="_blank"> link.</a><br>
-Cálculo IMC - <a href="https://www.github.com/mateusrr/calculo-imc/" target="_blank"> link.</a><br>
-Cronômetro - <a href="https://www.github.com/mateusrr/cronometro/" target="_blank"> link.</a><br>
-Jogo da memória - <a href="https://www.github.com/mateusrr/memoryGame/" target="_blank"> link.</a><br>
-Calculadora de gorjeta - <a href="https://www.github.com/mateusrr/TipCalculator/" target="_blank"> link.</a><br>
- </p>
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
