@@ -3,6 +3,7 @@ import { Box, Flex, Grid, Text } from '@chakra-ui/react'
 import Languages from '../components/About/Languages'
 import Header from '@/components/Header/index'
 import IconModal from '@/components/About/Modal'
+import Footer from '@/components/Footer'
 
 const Paragraph = ({ children }: any) => (
   <Text mt={5} textAlign="justify">
@@ -40,6 +41,8 @@ export default function About() {
             <IconModal />
           </Box>
         </Grid>
+
+        <Footer />
       </Box>
     </>
   )

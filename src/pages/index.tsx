@@ -4,6 +4,7 @@ import Header from '@/components/Header/index'
 import { motion } from 'framer-motion'
 import { BsLinkedin, BsGithub } from 'react-icons/bs'
 import SocialMedia from '../components/SocialMedia'
+import Footer from '@/components/Footer'
 
 const Motion = motion(Box)
 export default function Home() {
@@ -34,10 +35,11 @@ export default function Home() {
             <Heading as="h2" size="xl" fontWeight="normal">
               Olá! Eu sou,
             </Heading>
-            <Heading as="h1" size="4xl">
-              Mateus Rocha.
+            <Heading as="h1" m="1rem 0" size="4xl">
+              Mateus Rocha
+              <span style={{ color: 'yellow', fontSize: '3rem' }}>.</span>
             </Heading>
-            <Text fontSize="md" letterSpacing={2} mt={5} fontWeight="normal">
+            <Text fontSize="md" letterSpacing={2} fontWeight="normal">
               Desenvolvedor Front-End.
             </Text>
           </Box>
@@ -55,6 +57,8 @@ export default function Home() {
           </Flex>
         </Motion>
       </Flex>
+
+      <Footer />
     </Box>
   )
 }

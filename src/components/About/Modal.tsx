@@ -12,6 +12,7 @@ import {
   useDisclosure,
 } from '@chakra-ui/react'
 import { FaGitSquare } from 'react-icons/fa' // Exemplo de ícones do Font Awesome
+import Languages from './Languages'
 
 const IconModal = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -19,15 +20,22 @@ const IconModal = () => {
   return (
     <>
       <Button onClick={onOpen}>Abrir Modal de Ícones</Button>
-      <Modal isOpen={isOpen} onClose={onClose} size="sm">
+      <Modal isOpen={isOpen} onClose={onClose} size="2xl">
         <Flex flexWrap="wrap" alignItems="center">
           <ModalOverlay />
           <ModalContent>
-            <ModalHeader>Ícones</ModalHeader>
+            <ModalHeader>Hard skills</ModalHeader>
             <ModalCloseButton />
             <ModalBody>
               <Flex justifyContent="space-around">
-                <Icon as={FaGitSquare} boxSize={6} />
+                <Languages />
+              </Flex>
+            </ModalBody>
+
+            <ModalHeader>Hard skills</ModalHeader>
+            <ModalBody>
+              <Flex justifyContent="space-around">
+                <Languages />
               </Flex>
             </ModalBody>
             <ModalFooter>

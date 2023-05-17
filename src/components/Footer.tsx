@@ -1,7 +1,7 @@
 import { Box, Flex, Text } from '@chakra-ui/react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
-import Line from '../components/Line'
-import SocialMedia from '../components/SocialMedia'
+import Line from './Line'
+import SocialMedia from './SocialMedia'
 
 export default function Footer() {
   return (

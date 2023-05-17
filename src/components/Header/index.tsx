@@ -1,4 +1,11 @@
-import { Flex, Heading, Icon, IconButton, useColorMode } from '@chakra-ui/react'
+import {
+  Flex,
+  Heading,
+  Icon,
+  IconButton,
+  Text,
+  useColorMode,
+} from '@chakra-ui/react'
 import Link from 'next/link'
 import { FiMoon, FiSun } from 'react-icons/fi'
 import Line from '../Line'
@@ -22,8 +29,8 @@ export default function Header() {
         mx="auto"
         transition="background-color 0.2s"
       >
-        <Heading as="h1" size="md">
-          <Link href="/">MRR</Link>
+        <Heading size="md">
+          <Link href="/">&#60; MRR &#62;</Link>
         </Heading>
 
         <Flex align="center">
