@@ -1,10 +1,9 @@
 import React from 'react'
-import { Box, Grid, Text } from '@chakra-ui/react'
+import { Box, Grid, ListItem, Text, UnorderedList } from '@chakra-ui/react'
 import Header from '@/components/Header/index'
-import IconModal from '@/components/About/Modal'
-import Footer from '@/components/Footer'
 import BoxColor from '@/components/BoxColor'
 import MotionEffect from '@/components/MotionEffect'
+import Languages from '@/components/About/Languages'
 
 const Paragraph = ({ children }: any) => (
   <Text mt={5} textAlign="justify">
@@ -35,12 +34,35 @@ export default function About() {
                 para atingir os objetivos da organização.
               </Paragraph>
 
-              <IconModal />
+              <Box mt={8}>
+                <Text
+                  fontSize="xl"
+                  fontWeight="medium"
+                  style={{
+                    width: 110,
+                    borderBottom: '2px solid',
+                    color: 'blue',
+                  }}
+                >
+                  Hard Skills
+                </Text>
+                <Languages />
+                <Text fontSize="xl" mt={8} fontWeight="medium">
+                  Soft Skills
+                </Text>
+                <Box w={110} mb={3} borderBottom="2px solid" color="blue.500" />
+                <UnorderedList>
+                  <ListItem>Trabalho em equipe</ListItem>
+                  <ListItem>Organização</ListItem>
+                  <ListItem>Proativo</ListItem>
+                  <ListItem>Autogereciamento</ListItem>
+                  <ListItem>Design</ListItem>
+                </UnorderedList>
+              </Box>
             </Box>
           </Grid>
         </BoxColor>
       </MotionEffect>
-      <Footer />
     </>
   )
 }

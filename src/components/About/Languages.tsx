@@ -1,19 +1,18 @@
-import { Flex, HStack, IconButton, Link as ChakraLink } from '@chakra-ui/react'
+import { IconButton, Link as ChakraLink, Box } from '@chakra-ui/react'
 import * as Icons from 'react-icons/si'
 
 const LanguagesDefinition = ({ href, icon: Icon, ariaLabel }: any) => {
   return (
     <IconButton
-      size="lg"
+      fontSize={40}
       variant="outline"
-      bg="yellow.500"
       border="none"
-      color="white"
-      _hover={{ bg: 'yellow.600' }}
+      color="blue.500"
       as={ChakraLink}
       aria-label={ariaLabel}
       href={href}
       target="_blank"
+      p={2}
     >
       <Icon />
     </IconButton>
@@ -22,8 +21,8 @@ const LanguagesDefinition = ({ href, icon: Icon, ariaLabel }: any) => {
 
 export default function Languages() {
   return (
-    <Flex flexDir="column" justify="center" align="center" gap={3} m={5}>
-      <HStack>
+    <>
+      <Box>
         <LanguagesDefinition
           ariaLabel="html5"
           icon={Icons.SiHtml5}
@@ -33,21 +32,6 @@ export default function Languages() {
           ariaLabel="css3"
           icon={Icons.SiCss3}
           href="https://www.w3.org/TR/css-2018/"
-        />
-        <LanguagesDefinition
-          ariaLabel="sass"
-          icon={Icons.SiSass}
-          href="https://sass-lang.com/"
-        />
-        <LanguagesDefinition
-          ariaLabel="styled-component"
-          icon={Icons.SiStyledcomponents}
-          href="https://styled-components.com/"
-        />
-        <LanguagesDefinition
-          ariaLabel="chakraui"
-          icon={Icons.SiChakraui}
-          href="https://chakra-ui.com/"
         />
         <LanguagesDefinition
           ariaLabel="js"
@@ -60,9 +44,14 @@ export default function Languages() {
           href="https://www.typescriptlang.org/"
         />
         <LanguagesDefinition
-          ariaLabel="reactjs"
-          icon={Icons.SiReact}
-          href="https://reactjs.org/"
+          ariaLabel="sass"
+          icon={Icons.SiSass}
+          href="https://sass-lang.com/"
+        />
+        <LanguagesDefinition
+          ariaLabel="chakraui"
+          icon={Icons.SiChakraui}
+          href="https://chakra-ui.com/"
         />
         <LanguagesDefinition
           ariaLabel="nextjs"
@@ -79,7 +68,22 @@ export default function Languages() {
           icon={Icons.SiGithub}
           href="https://github.com/"
         />
-      </HStack>
-    </Flex>
+        <LanguagesDefinition
+          ariaLabel="reactjs"
+          icon={Icons.SiReact}
+          href="https://reactjs.org/"
+        />
+        <LanguagesDefinition
+          ariaLabel="styled-component"
+          icon={Icons.SiStyledcomponents}
+          href="https://styled-components.com/"
+        />
+        <LanguagesDefinition
+          ariaLabel="my-sql"
+          icon={Icons.SiMysql}
+          href="https://styled-components.com/"
+        />
+      </Box>
+    </>
   )
 }
