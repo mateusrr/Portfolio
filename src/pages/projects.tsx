@@ -1,144 +1,76 @@
 import React, { useState } from 'react'
-import {
-  Box,
-  Button,
-  Card,
-  Flex,
-  Image,
-  SimpleGrid,
-  Popover,
-  Link,
-  PopoverTrigger,
-  PopoverArrow,
-  PopoverContent,
-} from '@chakra-ui/react'
-import { projectsData } from '../components/Projects/ProjectsData'
-import { motion } from 'framer-motion'
+import { Button, Flex, Image, SimpleGrid, Icon } from '@chakra-ui/react'
+import { projectsData } from '@/components/Projects/ProjectsData'
+import { FiExternalLink } from 'react-icons/fi'
+import CardEffect from '@/components/Projects/CardEffect'
 import Header from '@/components/Header'
-import BoxColor from '@/components/BoxColor'
 import Footer from '@/components/Footer'
-import MotionEffect from '@/components/MotionEffect'
 
-interface ProjectsProps {
-  id: string
-}
-
-const MotionCard = motion(Card)
-
-export default function Projects({ id }: ProjectsProps) {
+export default function Projects() {
   const [showAll, setShowAll] = useState(false)
+
   const projects = showAll ? projectsData : projectsData.slice(0, 2)
 
   return (
     <>
       <Header />
-      <MotionEffect>
-        <BoxColor>
-          <Flex direction="column" align="center" justify="center" m="20vh">
-            <SimpleGrid mt={8} mx="auto" position="relative">
-              {projects.map((project) => (
-                // eslint-disable-next-line react/jsx-key
-                <Flex flexDir="column">
-                  <MotionCard
-                    h="50%"
-                    w="40rem"
-                    color="white"
-                    key={project.id}
-                    transition={{ duration: 0.7 }}
-                    whileHover={{ scale: 1.05 }}
-                    borderWidth="1px"
-                    borderRadius="md"
-                    overflow="hidden"
-                    mb={3}
-                    border="1px solid black"
-                  >
-                    <Image
-                      objectFit="cover"
-                      src={project.image}
-                      alt={project.name}
-                    />
-                  </MotionCard>
-
-                  <Popover isLazy>
-                    <PopoverTrigger>
-                      <Button
-                        bg="gray.100"
-                        color="gray.900"
-                        fontSize="xl"
-                        fontWeight="normal"
-                        _hover={{ bg: 'gray.700', color: 'white' }}
-                      >
-                        {project.name}
-                      </Button>
-                    </PopoverTrigger>
-                    <PopoverContent
-                      flexDirection="row"
-                      gap={2}
-                      width="40"
-                      p="2"
-                    >
-                      <PopoverArrow />
-                      <Button
-                        as="a"
-                        rel="noopener noreferrer"
-                        href={project.deploy}
-                        fontSize="xs"
-                        fontWeight="normal"
-                        h={7}
-                        target="_blank"
-                      >
-                        Deploy
-                      </Button>
-                      <Button
-                        as="a"
-                        rel="noopener noreferrer"
-                        href={project.repository}
-                        fontSize="xs"
-                        fontWeight="normal"
-                        h={7}
-                        target="_blank"
-                      >
-                        Repositório
-                      </Button>
-                    </PopoverContent>
-                  </Popover>
-                </Flex>
-              ))}
-            </SimpleGrid>
-
-            {!showAll && (
-              <Box>
+      <Flex direction="column" align="center" justify="center" m="20vh">
+        <SimpleGrid columns={1} spacing={10} maxWidth="700px">
+          {projects.map((project) => (
+            <>
+              <CardEffect key={project.id}>
+                <Image
+                  borderRadius={20}
+                  src={project.image}
+                  alt={project.name}
+                  h="400px"
+                  objectFit="cover"
+                />
+              </CardEffect>
+              <Flex justify="center" gap={5}>
                 <Button
-                  onClick={() => setShowAll(true)}
-                  bg="yellow.500"
-                  color="black"
-                  _hover={{ color: 'white', bg: 'yellow.600' }}
+                  bg="blue.500"
+                  color="gray.100"
                   fontWeight="normal"
-                >
-                  Ver mais
-                </Button>
-              </Box>
-            )}
-            {showAll && (
-              <Flex align="center" justify="center" fontSize="md" gap={2}>
-                Para mais projetos
-                <Link
-                  p={1}
-                  textDecor="none"
-                  href="https://github.com/mateusrr?tab=repositories"
+                  _hover={{ bg: 'gray.700', color: 'white' }}
+                  as="a"
+                  href={project.deploy}
                   target="_blank"
-                  bg="yellow.500"
-                  borderRadius="10px"
-                  color="black"
-                  _hover={{ bg: 'yellow.600', color: 'white' }}
+                  rel="noopener noreferrer"
                 >
-                  Github
-                </Link>
+                  Deploy <Icon ml={1} as={FiExternalLink} />
+                </Button>
+
+                <Button
+                  bg="blue.500"
+                  color="gray.100"
+                  fontWeight="normal"
+                  _hover={{ bg: 'gray.700', color: 'white' }}
+                  as="a"
+                  href={project.repository}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Repositório <Icon ml={1} as={FiExternalLink} />
+                </Button>
               </Flex>
-            )}
-          </Flex>
-        </BoxColor>
-      </MotionEffect>
+            </>
+          ))}
+        </SimpleGrid>
+
+        {!showAll && (
+          <Button
+            mt={8}
+            bg="yellow.500"
+            color="black"
+            fontWeight="normal"
+            _hover={{ color: 'white', bg: 'yellow.600' }}
+            onClick={() => setShowAll(true)}
+          >
+            Ver mais
+          </Button>
+        )}
+      </Flex>
       <Footer />
     </>
   )

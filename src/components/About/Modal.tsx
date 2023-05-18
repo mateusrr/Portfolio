@@ -6,7 +6,6 @@ import {
   ModalHeader,
   ModalCloseButton,
   ModalBody,
-  ModalFooter,
   Flex,
   useDisclosure,
 } from '@chakra-ui/react'
@@ -16,35 +15,23 @@ const IconModal = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
-    <>
-      <Button onClick={onOpen}>Abrir Modal de Ícones</Button>
+    <Flex justify="center" align="center" mt={5} gap={5}>
+      <Button onClick={onOpen}>Habilidades</Button>
       <Modal isOpen={isOpen} onClose={onClose} size="2xl">
         <Flex flexWrap="wrap" alignItems="center">
           <ModalOverlay />
           <ModalContent>
-            <ModalHeader>Hard skills</ModalHeader>
             <ModalCloseButton />
             <ModalBody>
               <Flex justifyContent="space-around">
                 <Languages />
               </Flex>
             </ModalBody>
-
-            <ModalHeader>Hard skills</ModalHeader>
-            <ModalBody>
-              <Flex justifyContent="space-around">
-                <Languages />
-              </Flex>
-            </ModalBody>
-            <ModalFooter>
-              <Button colorScheme="blue" mr={3} onClick={onClose}>
-                Fechar
-              </Button>
-            </ModalFooter>
           </ModalContent>
         </Flex>
       </Modal>
-    </>
+      <Button>Baixar CV</Button>
+    </Flex>
   )
 }
 

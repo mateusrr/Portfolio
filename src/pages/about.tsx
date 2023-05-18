@@ -1,6 +1,5 @@
 import React from 'react'
 import { Box, Grid, Text } from '@chakra-ui/react'
-import Languages from '../components/About/Languages'
 import Header from '@/components/Header/index'
 import IconModal from '@/components/About/Modal'
 import Footer from '@/components/Footer'
@@ -20,7 +19,7 @@ export default function About() {
       <MotionEffect>
         <BoxColor>
           <Grid placeItems="center" height="calc(100vh - 82px)">
-            <Box maxW="700px" fontSize="md" mt={8}>
+            <Box maxW="700px" fontSize="md">
               <Paragraph>
                 Estou no 7º período de Engenharia da Computação pela Uniceuma em
                 São Luís - Maranhão. Meu foco tem sido o Desenvolvimento
@@ -35,12 +34,6 @@ export default function About() {
                 que posso agregar valor à empresa, além de trabalhar em equipe
                 para atingir os objetivos da organização.
               </Paragraph>
-
-              <Paragraph>
-                Gostaria de aproveitar essa oportunidade para destacar minhas
-                habilidades em programação, incluindo:
-              </Paragraph>
-              <Languages />
 
               <IconModal />
             </Box>

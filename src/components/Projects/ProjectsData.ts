@@ -2,7 +2,7 @@ export const projectsData = [
   {
     id: 1,
     name: 'Website',
-    image: 'https://thumbs2.imgbox.com/9c/7e/XlIC03Yx_t.png',
+    image: '/coffe-delivery.png',
     deploy: 'https://mateusrr.github.io/website/',
     repository: 'https://github.com/mateusrr/website',
   },
