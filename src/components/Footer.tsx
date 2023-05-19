@@ -2,11 +2,10 @@ import { Flex, Text } from '@chakra-ui/react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import Line from './Line'
 import SocialMedia from './SocialMedia'
-import BoxColor from './BoxColor'
 
 export default function Footer() {
   return (
-    <BoxColor position="relative">
+    <>
       <Line />
 
       <Flex
@@ -31,6 +30,6 @@ export default function Footer() {
           ariaLabel="Linkedin"
         />
       </Flex>
-    </BoxColor>
+    </>
   )
 }

@@ -2,10 +2,14 @@
 import { extendTheme } from '@chakra-ui/react'
 
 const theme = extendTheme({
-  global: {
-    'html, body': {
-      bg: 'black',
-    },
+  styles: {
+    global: (props: { colorMode: string }) => ({
+      'html, body': {
+        background: props.colorMode === 'light' ? 'white' : 'gray.800',
+        color: props.colorMode === 'light' ? 'gray.800' : 'gray.100',
+        transition: 'background-color 0.2s',
+      },
+    }),
   },
   colors: {
     blue: {

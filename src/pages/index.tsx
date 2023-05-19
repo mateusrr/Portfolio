@@ -3,15 +3,12 @@ import { Box, Flex, Heading, Text } from '@chakra-ui/react'
 import Header from '@/components/Header/index'
 import { BsLinkedin, BsGithub } from 'react-icons/bs'
 import SocialMedia from '../components/SocialMedia'
-import BoxColor from '@/components/BoxColor'
 import MotionEffect from '@/components/MotionEffect'
-import ThreeAnimation from '@/components/ThreeAnimation'
 
 export default function Home() {
   return (
-    <BoxColor>
+    <>
       <Header />
-
       <Flex
         direction="column"
         align="center"
@@ -45,6 +42,6 @@ export default function Home() {
           </Flex>
         </MotionEffect>
       </Flex>
-    </BoxColor>
+    </>
   )
 }
