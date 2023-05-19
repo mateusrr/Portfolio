@@ -1,5 +1,6 @@
-import { Flex, Heading, Icon, IconButton, useColorMode } from '@chakra-ui/react'
+import { Box, Flex, Icon, IconButton, useColorMode } from '@chakra-ui/react'
 import Link from 'next/link'
+import { FaLaptopCode } from 'react-icons/fa'
 import { FiMoon, FiSun } from 'react-icons/fi'
 import Line from '../Line'
 import LinksHeader from './LinksHeader'
@@ -22,9 +23,16 @@ export default function Header() {
         mx="auto"
         transition="background-color 0.2s"
       >
-        <Heading size="md">
-          <Link href="/">&#60; MR &#62;</Link>
-        </Heading>
+        <Box
+          fontSize="xl"
+          fontWeight="medium"
+          display="flex"
+          alignItems="center"
+          gap={1}
+        >
+          <Link href="/">MR</Link>
+          <Icon as={FaLaptopCode} />
+        </Box>
 
         <Flex align="center">
           <LinksHeader />
@@ -36,7 +44,6 @@ export default function Header() {
               colorMode === 'light' ? <Icon as={FiMoon} /> : <Icon as={FiSun} />
             }
             onClick={handleColorChange}
-            ml={4}
           />
         </Flex>
       </Flex>

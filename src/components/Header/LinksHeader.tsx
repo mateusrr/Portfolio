@@ -1,4 +1,4 @@
-import { Box, ResponsiveValue, LinkProps, Link } from '@chakra-ui/react'
+import { Box, ResponsiveValue, LinkProps, Link, Flex } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 
 const Motion = motion(Box)
@@ -10,7 +10,7 @@ const linkProps: Omit<LinkProps, 'position'> & {
   transition: 'all 0.3s',
   pos: 'relative',
   display: 'inline-block',
-  marginRight: '4',
+  marginRight: '3',
   _hover: {
     _before: {
       width: '100%',
@@ -27,7 +27,7 @@ const linkProps: Omit<LinkProps, 'position'> & {
 
 export default function LinksHeader() {
   return (
-    <>
+    <Flex>
       <Motion whileHover={{ opacity: 0.5 }} whileTap={{ opacity: 0.8 }}>
         <Link {...linkProps} href="/about">
           Sobre
@@ -39,6 +39,6 @@ export default function LinksHeader() {
           Projetos
         </Link>
       </Motion>
-    </>
+    </Flex>
   )
 }

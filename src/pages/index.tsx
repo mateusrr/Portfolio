@@ -3,9 +3,9 @@ import { Box, Flex, Heading, Text } from '@chakra-ui/react'
 import Header from '@/components/Header/index'
 import { BsLinkedin, BsGithub } from 'react-icons/bs'
 import SocialMedia from '../components/SocialMedia'
-import Footer from '@/components/Footer'
 import BoxColor from '@/components/BoxColor'
 import MotionEffect from '@/components/MotionEffect'
+import ThreeAnimation from '@/components/ThreeAnimation'
 
 export default function Home() {
   return (
@@ -25,7 +25,7 @@ export default function Home() {
             </Heading>
             <Heading as="h1" m="0.275rem 0" size="4xl">
               Mateus Rocha
-              <span style={{ color: 'blue', fontSize: '3rem' }}>.</span>
+              <span style={{ color: '#3182CE', fontSize: '3rem' }}>.</span>
             </Heading>
             <Text fontSize="md" letterSpacing={2} fontWeight="normal">
               Desenvolvedor Front-End.
@@ -45,8 +45,6 @@ export default function Home() {
           </Flex>
         </MotionEffect>
       </Flex>
-
-      <Footer />
     </BoxColor>
   )
 }

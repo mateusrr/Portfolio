@@ -4,15 +4,22 @@ import * as Icons from 'react-icons/si'
 const LanguagesDefinition = ({ href, icon: Icon, ariaLabel }: any) => {
   return (
     <IconButton
-      fontSize={40}
+      fontSize={20}
       variant="outline"
       border="none"
-      color="blue.500"
+      color="gray.100"
       as={ChakraLink}
       aria-label={ariaLabel}
       href={href}
       target="_blank"
-      p={2}
+      bg="blue.500"
+      p={3}
+      m={1}
+      h="40px"
+      borderRadius={8}
+      _hover={{
+        bg: 'blue.600',
+      }}
     >
       <Icon />
     </IconButton>
@@ -53,6 +60,7 @@ export default function Languages() {
           icon={Icons.SiChakraui}
           href="https://chakra-ui.com/"
         />
+
         <LanguagesDefinition
           ariaLabel="nextjs"
           icon={Icons.SiNextdotjs}

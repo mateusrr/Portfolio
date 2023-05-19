@@ -1,53 +1,51 @@
 import {
-  Button,
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalCloseButton,
-  ModalBody,
-  Flex,
-  useDisclosure,
-  Link,
+  Box,
+  ListItem,
+  SimpleGrid,
   Text,
+  UnorderedList,
 } from '@chakra-ui/react'
 import Languages from './Languages'
 
 const IconModal = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure()
-
   return (
-    <Flex gap={2} mt={4}>
-      <Button onClick={onOpen}>Habilidades</Button>
+    <SimpleGrid templateColumns="repeat(2, 1fr)">
+      <Box>
+        <Text
+          mt={8}
+          mb={3}
+          fontSize="xl"
+          fontWeight="medium"
+          borderBottom="2px solid"
+          borderBottomColor="blue.500"
+          w="110px"
+        >
+          Hard Skills
+        </Text>
 
-      <Modal isOpen={isOpen} onClose={onClose} isCentered>
-        <ModalOverlay
-          bg="blackAlpha.300"
-          backdropFilter="blur(5px) hue-rotate(90deg)"
-        />
-        <ModalContent>
-          <ModalCloseButton />
-          <ModalBody>
-            <Flex direction="column">
-              <Text>Hard Skills</Text>
-
-              <Languages />
-              <Text mt={8}>Soft Skills</Text>
-              <Text>
-                Trabalho em equipe; Organização; Proativo; Autogerenciamento;
-                Design
-              </Text>
-            </Flex>
-          </ModalBody>
-        </ModalContent>
-      </Modal>
-
-      <Button>
-        <Link target="_blank" href="/Curriculo-Mateus.pdf">
-          CV
-        </Link>
-      </Button>
-    </Flex>
+        <Languages />
+      </Box>
+      <Box>
+        <Text
+          fontSize="xl"
+          mt={8}
+          mb={3}
+          fontWeight="medium"
+          borderBottom="2px solid"
+          borderBottomColor="blue.500"
+          borderRight={110}
+          w="100px"
+        >
+          Soft Skills
+        </Text>
+        <UnorderedList>
+          <ListItem>
+            Trabalho em equipe | Organização | Proativo | Autogerenciamento |
+            Design
+          </ListItem>
+        </UnorderedList>
+      </Box>
+    </SimpleGrid>
   )
 }
-
 export default IconModal
