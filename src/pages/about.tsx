@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Grid, Highlight, Text } from '@chakra-ui/react'
 import Header from '@/components/Header/index'
 import MotionEffect from '@/components/MotionEffect'
-import IconModal from '@/components/About/Modal'
+import Skills from '@/components/About/Skills'
 
 export default function About() {
   return (
@@ -32,7 +32,7 @@ export default function About() {
                 para atingir os resultados esperados da organização.
               </Highlight>
             </Text>
-            <IconModal />
+            <Skills />
           </Box>
         </Grid>
       </MotionEffect>

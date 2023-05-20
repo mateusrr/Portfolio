@@ -7,7 +7,7 @@ import {
 } from '@chakra-ui/react'
 import Languages from './Languages'
 
-const IconModal = () => {
+const Skills = () => {
   return (
     <SimpleGrid templateColumns="repeat(2, 1fr)">
       <Box>
@@ -48,4 +48,4 @@ const IconModal = () => {
     </SimpleGrid>
   )
 }
-export default IconModal
+export default Skills
