@@ -14,12 +14,12 @@ const linkProps: Omit<LinkProps, 'position'> & {
   _hover: {
     _before: {
       width: '100%',
-      height: '2px',
+      height: '0.5px',
       content: '""',
       position: 'absolute',
       bottom: 0,
       left: 0,
-      backgroundColor: 'blue.500',
+      backgroundColor: 'orange.400',
       transition: 'all 0.3s',
     },
   },

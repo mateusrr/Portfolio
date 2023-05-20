@@ -31,7 +31,7 @@ export default function Header() {
           gap={1}
         >
           <Link href="/">MR</Link>
-          <Icon as={FaLaptopCode} />
+          <Icon as={FaLaptopCode} color="orange.400" />
         </Box>
 
         <Flex align="center">

@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { Button, Flex, Image, SimpleGrid, Link, Text } from '@chakra-ui/react'
 import { projectsData } from '@/components/Projects/ProjectsData'
-import CardEffect from '@/components/Projects/CardEffect'
 import Header from '@/components/Header'
 import ButtonsAcess from '@/components/Projects/ButtonsAcess'
+import Effect from '@/pages/effect'
 
 export default function Projects() {
   const [showAll, setShowAll] = useState(false)
@@ -16,7 +16,7 @@ export default function Projects() {
         <SimpleGrid maxWidth="700px" gap={7}>
           {projects.map((project) => (
             <>
-              <CardEffect key={project.id}>
+              <Effect>
                 <Image
                   borderRadius={8}
                   src={project.image}
@@ -24,7 +24,7 @@ export default function Projects() {
                   h="400px"
                   objectFit="cover"
                 />
-              </CardEffect>
+              </Effect>
 
               <Flex gap={2}>
                 <ButtonsAcess href={project.deploy}>Deploy</ButtonsAcess>
@@ -39,10 +39,10 @@ export default function Projects() {
         {!showAll && (
           <Button
             mt={8}
-            bg="yellow.500"
+            bg="orange.400"
             color="black"
             fontWeight="normal"
-            _hover={{ color: 'white', bg: 'yellow.600' }}
+            _hover={{ color: 'white', bg: 'orange.500' }}
             onClick={() => setShowAll(true)}
           >
             Ver mais
@@ -57,12 +57,12 @@ export default function Projects() {
               borderRadius={5}
               p={1}
               h={8}
-              bg="yellow.500"
+              bg="orange.400"
               target="_blank"
               href="https://github.com/mateusrr?tab=repositories"
               color="black"
               fontWeight="normal"
-              _hover={{ color: 'white', bg: 'yellow.600' }}
+              _hover={{ color: 'white', bg: 'orange.500' }}
             >
               Github
             </Link>

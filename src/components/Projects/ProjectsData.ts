@@ -9,7 +9,7 @@ export const projectsData = [
   {
     id: 2,
     name: 'Pokédex',
-    image: 'https://thumbs2.imgbox.com/f9/02/nth6CxVd_t.png',
+    image: '/mesh-646.png',
     deploy: 'https://mateusrr.github.io/ListandoPokemon/',
     repository: 'https://github.com/mateusrr/ListandoPokemon',
   },

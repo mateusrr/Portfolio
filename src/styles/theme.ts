@@ -5,7 +5,7 @@ const theme = extendTheme({
   styles: {
     global: (props: { colorMode: string }) => ({
       'html, body': {
-        background: props.colorMode === 'light' ? 'white' : 'gray.800',
+        background: props.colorMode === 'light' ? 'white' : 'gray.900',
         color: props.colorMode === 'light' ? 'gray.800' : 'gray.100',
         transition: 'background-color 0.2s',
       },
@@ -15,6 +15,11 @@ const theme = extendTheme({
     blue: {
       900: '#1A365D',
       700: '#2C5282',
+      500: '#3182CE',
+    },
+    gray: {
+      100: '#EDF2F7',
+      900: '#171923',
     },
   },
   fonts: {
