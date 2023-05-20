@@ -4,6 +4,7 @@ import Header from '@/components/Header/index'
 import { BsLinkedin, BsGithub } from 'react-icons/bs'
 import SocialMedia from '../components/SocialMedia'
 import MotionEffect from '@/components/MotionEffect'
+import ParticlesBackground from '../components/ParticlesBackground'
 
 export default function Home() {
   return (
@@ -41,6 +42,7 @@ export default function Home() {
             />
           </Flex>
         </MotionEffect>
+        <ParticlesBackground />
       </Flex>
     </>
   )
