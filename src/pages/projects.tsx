@@ -3,7 +3,7 @@ import { Button, Flex, Image, SimpleGrid, Link, Text } from '@chakra-ui/react'
 import { projectsData } from '@/components/Projects/ProjectsData'
 import Header from '@/components/Header'
 import ButtonsAcess from '@/components/Projects/ButtonsAcess'
-import Effect from '@/pages/effect'
+import Effect from '@/components/Projects/Effect'
 
 export default function Projects() {
   const [showAll, setShowAll] = useState(false)
