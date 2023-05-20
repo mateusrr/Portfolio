@@ -75,8 +75,8 @@ export default function Effect({ children }: EffectProps) {
         style={{
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          width: 500,
-          height: 300,
+          width: 700,
+          height: 400,
           borderRadius: 30,
           backgroundColor: 'transparent',
           boxShadow: '5px 8px 10px rgba(0, 0, 0, 0.1)',

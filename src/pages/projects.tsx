@@ -21,7 +21,8 @@ export default function Projects() {
                   borderRadius={8}
                   src={project.image}
                   alt={project.name}
-                  h="400px"
+                  h="100%"
+                  w="100%"
                   objectFit="cover"
                 />
               </Effect>
