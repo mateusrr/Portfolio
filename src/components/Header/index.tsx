@@ -17,14 +17,15 @@ export default function Header() {
       <Flex
         as="header"
         align="center"
-        justify="space-between"
-        h="80px"
-        maxW="800px"
+        justify={{ base: 'center', md: 'space-between' }}
+        direction={{ base: 'column', md: 'row' }}
+        h={{ base: '100px', md: '80px' }} // Altura responsiva para mobile e desktop
+        maxW={{ base: '50%', md: '800px' }}
         mx="auto"
         transition="background-color 0.2s"
       >
         <Box
-          fontSize="xl"
+          fontSize={{ base: 'md', md: 'xl' }} // Tamanho da fonte responsiva para mobile e desktop
           fontWeight="medium"
           display="flex"
           alignItems="center"
@@ -38,6 +39,7 @@ export default function Header() {
           <LinksHeader />
 
           <IconButton
+            fontSize={{ base: 'sm', md: 'md' }}
             bg="transparent"
             aria-label="Toggle color mode"
             icon={

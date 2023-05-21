@@ -12,10 +12,15 @@ export default function Projects() {
   return (
     <>
       <Header />
-      <Flex direction="column" align="center" justify="center" m="20vh">
-        <SimpleGrid maxWidth="700px" gap={7}>
+      <Flex
+        direction="column"
+        align="center"
+        justify="center"
+        m={{ base: '10vh', md: '20vh' }}
+      >
+        <SimpleGrid maxWidth="700px" gap={7} px={{ base: 4, md: 0 }} w="100%">
           {projects.map((project) => (
-            <>
+            <React.Fragment key={project.name}>
               <Effect>
                 <Image
                   borderRadius={8}
@@ -27,7 +32,12 @@ export default function Projects() {
                 />
               </Effect>
 
-              <Flex gap={2} justify="center">
+              <Flex
+                gap={2}
+                justify={{ base: 'center', md: 'center' }}
+                direction={{ base: 'column', md: 'row' }}
+                textAlign="center"
+              >
                 <Text mt={1} fontWeight="medium">
                   {project.name}
                 </Text>
@@ -36,7 +46,7 @@ export default function Projects() {
                   Repositório
                 </ButtonsAcess>
               </Flex>
-            </>
+            </React.Fragment>
           ))}
         </SimpleGrid>
 
@@ -47,6 +57,8 @@ export default function Projects() {
             color="black"
             fontWeight="normal"
             _hover={{ color: 'white', bg: 'orange.500', borderRadius: '10px' }}
+            size={{ base: '100%', md: 'md' }}
+            px={{ base: '4', md: 'md' }}
             onClick={() => setShowAll(true)}
           >
             Ver mais

@@ -11,7 +11,7 @@ const ButtonsAcess = ({ href, children }: ButtonAcess) => {
     <>
       <Button
         borderRadius="10px 15px"
-        mb={20}
+        mb={{ base: 4, md: 20 }}
         bg="blue.500"
         color="gray.100"
         fontWeight="normal"

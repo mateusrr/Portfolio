@@ -8,7 +8,6 @@ interface EffectProps {
 }
 export default function Effect({ children }: EffectProps) {
   // const projects = projectsData
-
   const x = useMotionValue(250)
   const y = useMotionValue(150)
 
@@ -64,6 +63,8 @@ export default function Effect({ children }: EffectProps) {
         placeItems: 'center',
         placeContent: 'center',
         perspective: 400,
+        maxWidth: '100%',
+        margin: '0 auto',
       }}
     >
       <motion.div
@@ -75,9 +76,11 @@ export default function Effect({ children }: EffectProps) {
         style={{
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          width: 700,
-          height: 400,
-          borderRadius: 30,
+          width: '100%',
+          maxWidth: '700px',
+          height: 'auto',
+          aspectRatio: '16/9',
+          borderRadius: '30px',
           backgroundColor: 'transparent',
           boxShadow: '5px 8px 10px rgba(0, 0, 0, 0.1)',
           transition: 'box-shadow 0.2s',
@@ -89,8 +92,8 @@ export default function Effect({ children }: EffectProps) {
         {children}
         <motion.div
           style={{
-            width: 1000,
-            height: 600,
+            width: '100%',
+            height: '100%',
             background:
               'radial-gradient(closest-side, rgba(255,255,255,0.2), rgba(255,255,255,0)) 60%',
             opacity: hoverOpacity,

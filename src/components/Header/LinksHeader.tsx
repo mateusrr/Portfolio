@@ -27,7 +27,7 @@ const linkProps: Omit<LinkProps, 'position'> & {
 
 export default function LinksHeader() {
   return (
-    <Flex>
+    <Flex fontSize={{ base: 'sm', md: 'md' }}>
       <Motion whileHover={{ opacity: 0.5 }} whileTap={{ opacity: 0.8 }}>
         <Link {...linkProps} href="/about">
           Sobre
