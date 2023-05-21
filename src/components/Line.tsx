@@ -4,7 +4,7 @@ const Line = () => (
   <Box
     display="flex"
     justifyContent="center"
-    maxW={{ base: '50%', md: '840px' }}
+    maxW={{ base: '80%', md: '840px' }}
     borderBottom="2px solid"
     color="blue.500"
     margin="auto"

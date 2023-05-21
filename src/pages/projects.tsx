@@ -18,7 +18,12 @@ export default function Projects() {
         justify="center"
         m={{ base: '10vh', md: '20vh' }}
       >
-        <SimpleGrid maxWidth="700px" gap={7} px={{ base: 4, md: 0 }} w="100%">
+        <SimpleGrid
+          maxWidth="700px"
+          gap={{ base: '4', md: '7' }}
+          px={{ base: 4, md: 0 }}
+          w="100%"
+        >
           {projects.map((project) => (
             <React.Fragment key={project.name}>
               <Effect>
@@ -33,14 +38,17 @@ export default function Projects() {
               </Effect>
 
               <Flex
-                gap={2}
+                gap={{ base: '0', md: '2' }}
                 justify={{ base: 'center', md: 'center' }}
                 direction={{ base: 'column', md: 'row' }}
+                mb={{ base: '7', md: '0' }}
                 textAlign="center"
               >
-                <Text mt={1} fontWeight="medium">
-                  {project.name}
-                </Text>
+                {/*
+                  <Text mt={1} fontWeight="medium">
+                    {project.name}
+                  </Text>
+                */}
                 <ButtonsAcess href={project.deploy}>Deploy</ButtonsAcess>
                 <ButtonsAcess href={project.repository}>
                   Repositório

@@ -80,7 +80,7 @@ export default function Effect({ children }: EffectProps) {
           maxWidth: '700px',
           height: 'auto',
           aspectRatio: '16/9',
-          borderRadius: '30px',
+          borderRadius: '10px',
           backgroundColor: 'transparent',
           boxShadow: '5px 8px 10px rgba(0, 0, 0, 0.1)',
           transition: 'box-shadow 0.2s',
