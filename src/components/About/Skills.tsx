@@ -39,7 +39,7 @@ const Skills = () => {
           Soft Skills
         </Text>
         <UnorderedList>
-          <ListItem>
+          <ListItem listStyleType="none" marginStart={-4}>
             Trabalho em equipe | Organização | Proativo | Autogerenciamento |
             Design
           </ListItem>
