@@ -27,7 +27,10 @@ export default function Projects() {
                 />
               </Effect>
 
-              <Flex gap={2}>
+              <Flex gap={2} justify="center">
+                <Text mt={1} fontWeight="medium">
+                  {project.name}
+                </Text>
                 <ButtonsAcess href={project.deploy}>Deploy</ButtonsAcess>
                 <ButtonsAcess href={project.repository}>
                   Repositório
@@ -43,7 +46,7 @@ export default function Projects() {
             bg="orange.400"
             color="black"
             fontWeight="normal"
-            _hover={{ color: 'white', bg: 'orange.500' }}
+            _hover={{ color: 'white', bg: 'orange.500', borderRadius: '10px' }}
             onClick={() => setShowAll(true)}
           >
             Ver mais
@@ -63,7 +66,11 @@ export default function Projects() {
               href="https://github.com/mateusrr?tab=repositories"
               color="black"
               fontWeight="normal"
-              _hover={{ color: 'white', bg: 'orange.500' }}
+              _hover={{
+                color: 'white',
+                bg: 'orange.500',
+                borderRadius: '10px',
+              }}
             >
               Github
             </Link>
