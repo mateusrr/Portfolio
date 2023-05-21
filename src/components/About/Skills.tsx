@@ -9,16 +9,18 @@ import Languages from './Languages'
 
 const Skills = () => {
   return (
-    <SimpleGrid templateColumns="repeat(2, 1fr)">
+    <SimpleGrid
+      templateColumns={{ base: '', md: 'repeat(2, 1fr)' }}
+      fontSize={{ base: 'sm', md: 'xl' }}
+    >
       <Box>
         <Text
           mt={8}
           mb={3}
-          fontSize="xl"
           fontWeight="medium"
           borderBottom="2px solid"
           borderBottomColor="blue.500"
-          w="110px"
+          w={{ base: '80px', md: '110px' }}
         >
           Hard Skills
         </Text>
@@ -27,19 +29,22 @@ const Skills = () => {
       </Box>
       <Box>
         <Text
-          fontSize="xl"
           mt={8}
           mb={3}
           fontWeight="medium"
           borderBottom="2px solid"
           borderBottomColor="blue.500"
           borderRight={110}
-          w="100px"
+          w={{ base: '75px', md: '100px' }}
         >
           Soft Skills
         </Text>
         <UnorderedList>
-          <ListItem listStyleType="none" marginStart={-4}>
+          <ListItem
+            listStyleType="none"
+            marginStart={-4}
+            fontSize={{ base: 'auto', md: 'md' }}
+          >
             Trabalho em equipe | Organização | Proativo | Autogerenciamento |
             Design
           </ListItem>

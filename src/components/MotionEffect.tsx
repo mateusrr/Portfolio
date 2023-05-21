@@ -3,19 +3,18 @@ import { motion } from 'framer-motion'
 import React from 'react'
 
 interface MotionEffectProps {
-  align?: string
   children?: React.ReactNode
 }
-const MotionEffect = ({ align, children }: MotionEffectProps) => {
+const MotionEffect = ({ children }: MotionEffectProps) => {
   const Motion = motion(Box)
-
+  // ajustar responsive mobile home
   return (
     <Motion
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      align={align}
       justify="center"
+      textAlign={{ base: 'center', md: 'left' }}
     >
       {children}
     </Motion>

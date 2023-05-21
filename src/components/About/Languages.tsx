@@ -4,7 +4,7 @@ import * as Icons from 'react-icons/si'
 const LanguagesDefinition = ({ href, icon: Icon, ariaLabel }: any) => {
   return (
     <IconButton
-      fontSize={20}
+      fontSize={{ base: '21px', md: '21px' }}
       variant="outline"
       border="none"
       color="gray.100"
@@ -13,7 +13,7 @@ const LanguagesDefinition = ({ href, icon: Icon, ariaLabel }: any) => {
       href={href}
       target="_blank"
       bg="blue.500"
-      p={3}
+      p={{ base: 'auto', md: '3' }}
       m={1}
       h="40px"
       borderRadius={8}

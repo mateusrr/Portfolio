@@ -9,8 +9,12 @@ export default function About() {
     <>
       <Header />
       <MotionEffect>
-        <Grid placeItems="center" height="calc(100vh - 82px)">
-          <Box maxW="700px" fontSize="md">
+        {/* ajustar altura do text */}
+        <Grid placeItems="center">
+          <Box
+            maxW={{ base: '80%', md: '700px' }}
+            fontSize={{ base: '10px', md: 'md' }}
+          >
             <Text>
               <Highlight
                 query={[
