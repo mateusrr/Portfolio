@@ -19,9 +19,9 @@ export default function Header() {
         align="center"
         justify={{ base: 'center', md: 'space-between' }}
         direction={{ base: 'column', md: 'row' }}
-        h={{ base: '100px', md: '80px' }} // Altura responsiva para mobile e desktop
+        h={{ base: '80px', md: '80px' }} // Altura responsiva para mobile e desktop
         maxW={{ base: '50%', md: '800px' }}
-        mx="auto"
+        m="auto"
         transition="background-color 0.2s"
       >
         <Box

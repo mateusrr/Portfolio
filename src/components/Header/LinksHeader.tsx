@@ -41,7 +41,7 @@ export default function LinksHeader() {
       </Motion>
 
       <Motion whileHover={{ opacity: 0.5 }} whileTap={{ opacity: 0.8 }}>
-        <Link {...linkProps} href="/projects">
+        <Link {...linkProps} href="/hobby">
           Hobby
         </Link>
       </Motion>

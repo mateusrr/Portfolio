@@ -4,7 +4,7 @@ import * as Icons from 'react-icons/si'
 const LanguagesDefinition = ({ href, icon: Icon, ariaLabel }: any) => {
   return (
     <IconButton
-      fontSize={{ base: '21px', md: '21px' }}
+      fontSize={{ base: '15px', md: '21px' }}
       variant="outline"
       border="none"
       color="gray.100"

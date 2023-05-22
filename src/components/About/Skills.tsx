@@ -12,6 +12,7 @@ const Skills = () => {
     <SimpleGrid
       templateColumns={{ base: '', md: 'repeat(2, 1fr)' }}
       fontSize={{ base: 'sm', md: 'xl' }}
+      gap={{ base: '', md: '8' }}
     >
       <Box>
         <Text
@@ -43,6 +44,7 @@ const Skills = () => {
           <ListItem
             listStyleType="none"
             marginStart={-4}
+            textAlign="left"
             fontSize={{ base: 'auto', md: 'md' }}
           >
             Trabalho em equipe | Organização | Proativo | Autogerenciamento |

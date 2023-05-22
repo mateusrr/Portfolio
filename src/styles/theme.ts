@@ -23,8 +23,8 @@ const theme = extendTheme({
     },
   },
   fonts: {
-    body: "'Poppins', sans-serif",
-    heading: "'Poppins', sans-serif",
+    body: "'Space Grotesk', sans-serif",
+    heading: "'Space Grotesk', sans-serif",
   },
   fontSizes: {
     xs: '12px',

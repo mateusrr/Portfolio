@@ -1,13 +1,28 @@
-import React, { useState } from 'react'
-import { Button, Flex, Image, SimpleGrid, Link, Text } from '@chakra-ui/react'
-import { projectsData } from '@/components/Projects/ProjectsData'
 import Header from '@/components/Header'
 import ButtonsAcess from '@/components/Projects/ButtonsAcess'
 import Effect from '@/components/Projects/Effect'
+import { getPrismicClient } from '@/services/prismic'
+import { Image, Link, Flex, SimpleGrid, Text, Button } from '@chakra-ui/react'
+import { GetStaticProps } from 'next'
+import React, { useState } from 'react'
 
-export default function Projects() {
+type Project = {
+  uid: string
+  data: {
+    image: { url: string }
+    title: Array<{ text: string }>
+    deploy: { url: string }
+    repository: { url: string }
+  }
+}
+
+interface ProjectProps {
+  projetos: Project[]
+}
+
+export default function Teste({ projetos }: ProjectProps) {
   const [showAll, setShowAll] = useState(false)
-  const projects = showAll ? projectsData : projectsData.slice(0, 2)
+  const projectsAll = showAll ? projetos : projetos.slice(0, 2)
 
   return (
     <>
@@ -24,16 +39,13 @@ export default function Projects() {
           px={{ base: 4, md: 0 }}
           w="100%"
         >
-          {projects.map((project) => (
-            <React.Fragment key={project.name}>
+          {projectsAll.map((projeto) => (
+            <React.Fragment key={projeto.uid}>
               <Effect>
                 <Image
-                  borderRadius={8}
-                  src={project.image}
-                  alt={project.name}
-                  h="100%"
-                  w="100%"
-                  objectFit="cover"
+                  src={projeto.data.image.url}
+                  alt={projeto.data.title[0].text}
+                  marginBottom="10px"
                 />
               </Effect>
 
@@ -44,13 +56,11 @@ export default function Projects() {
                 mb={{ base: '7', md: '0' }}
                 textAlign="center"
               >
-                {/*
-                  <Text mt={1} fontWeight="medium">
-                    {project.name}
-                  </Text>
-                */}
-                <ButtonsAcess href={project.deploy}>Deploy</ButtonsAcess>
-                <ButtonsAcess href={project.repository}>
+                <ButtonsAcess href={projeto.data.deploy.url}>
+                  Deploy
+                </ButtonsAcess>
+
+                <ButtonsAcess href={projeto.data.repository.url}>
                   Repositório
                 </ButtonsAcess>
               </Flex>
@@ -99,4 +109,24 @@ export default function Projects() {
       </Flex>
     </>
   )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const prismic = getPrismicClient()
+
+  const response = await prismic.getByType('projeto', {
+    fetchLinks: [
+      'projeto.deploy',
+      'projeto.repository',
+      'projeto.image',
+      'projeto.title',
+    ],
+  })
+  const projetos = response.results
+
+  return {
+    props: {
+      projetos,
+    },
+  }
 }

@@ -10,10 +10,12 @@ export default function About() {
       <Header />
       <MotionEffect>
         {/* ajustar altura do text */}
-        <Grid placeItems="center">
+        <Grid justifyContent="center">
           <Box
             maxW={{ base: '80%', md: '700px' }}
-            fontSize={{ base: '10px', md: 'md' }}
+            fontSize={{ base: '12px', md: 'md' }}
+            m={{ base: '10vh', md: '20vh' }}
+            textAlign="justify"
           >
             <Text>
               <Highlight
