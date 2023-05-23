@@ -6,3 +6,5 @@ add image
 terminar responsivo text
 
 - Create hobby
+
+- Verificar api de frases.
