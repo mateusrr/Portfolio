@@ -11,7 +11,7 @@ export default function About() {
       <MotionEffect>
         <Grid justifyContent="center">
           <Box
-            maxW={{ base: 'auto', md: '800px' }}
+            maxW={{ base: '500px', md: '800px' }}
             fontSize={{ base: 'sm', md: 'xl' }}
             m="15vh"
             textAlign="left"

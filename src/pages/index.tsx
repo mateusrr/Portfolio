@@ -5,7 +5,6 @@ import { BsLinkedin, BsGithub } from 'react-icons/bs'
 import SocialMedia from '../components/SocialMedia'
 import MotionEffect from '@/components/MotionEffect'
 import ParticlesBackground from '../components/ParticlesBackground'
-
 // ajustar responsive mobile home
 
 export default function Home() {
@@ -16,7 +15,7 @@ export default function Home() {
         direction="column"
         align="center"
         justify="center"
-        h="calc(100vh - 82px)"
+        h="calc(100vh - 100px)"
       >
         <MotionEffect>
           <Box fontWeight="medium">
