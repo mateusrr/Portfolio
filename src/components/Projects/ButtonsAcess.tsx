@@ -11,7 +11,7 @@ const ButtonsAcess = ({ href, children }: ButtonAcess) => {
     <>
       <Button
         borderRadius="10px 15px"
-        mb={{ base: 4, md: 20 }}
+        mb={{ base: 2, md: 20 }}
         bg="blue.500"
         color="gray.100"
         fontWeight="normal"
@@ -20,9 +20,11 @@ const ButtonsAcess = ({ href, children }: ButtonAcess) => {
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        size="sm"
+        size={{ base: 'xs', md: 'sm' }}
+        // w="auto"
       >
-        {children} <ExternalLinkIcon ml={1} fontSize="sm" />
+        {children}
+        <ExternalLinkIcon ml={1} fontSize={{ base: 'xs', md: 'sm' }} />
       </Button>
     </>
   )

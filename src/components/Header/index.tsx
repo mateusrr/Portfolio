@@ -19,7 +19,7 @@ export default function Header() {
         align="center"
         justify={{ base: 'center', md: 'space-between' }}
         direction={{ base: 'column', md: 'row' }}
-        h={{ base: '80px', md: '80px' }} // Altura responsiva para mobile e desktop
+        h="80px" // Altura responsiva para mobile e desktop
         maxW={{ base: '50%', md: '800px' }}
         m="auto"
         transition="background-color 0.2s"

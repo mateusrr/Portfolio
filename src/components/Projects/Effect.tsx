@@ -77,7 +77,6 @@ export default function Effect({ children }: EffectProps) {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           width: '100%',
-          maxWidth: '700px',
           height: 'auto',
           aspectRatio: '16/9',
           borderRadius: '10px',

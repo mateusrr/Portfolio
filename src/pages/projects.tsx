@@ -17,12 +17,12 @@ type Project = {
 }
 
 interface ProjectProps {
-  projetos: Project[]
+  projects: Project[]
 }
 
-export default function Teste({ projetos }: ProjectProps) {
+export default function Teste({ projects }: ProjectProps) {
   const [showAll, setShowAll] = useState(false)
-  const projectsAll = showAll ? projetos : projetos.slice(0, 2)
+  const projectsAll = showAll ? projects : projects.slice(0, 2)
 
   return (
     <>
@@ -31,13 +31,12 @@ export default function Teste({ projetos }: ProjectProps) {
         direction="column"
         align="center"
         justify="center"
-        m={{ base: '10vh', md: '20vh' }}
+        m={{ base: '5vh', md: '20vh' }}
       >
         <SimpleGrid
-          maxWidth="700px"
+          maxWidth={{ base: '500px', md: '800px' }}
           gap={{ base: '4', md: '7' }}
           px={{ base: 4, md: 0 }}
-          w="100%"
         >
           {projectsAll.map((projeto) => (
             <React.Fragment key={projeto.uid}>
@@ -50,9 +49,8 @@ export default function Teste({ projetos }: ProjectProps) {
               </Effect>
 
               <Flex
-                gap={{ base: '0', md: '2' }}
+                gap={{ base: '2', md: '2' }}
                 justify={{ base: 'center', md: 'center' }}
-                direction={{ base: 'column', md: 'row' }}
                 mb={{ base: '7', md: '0' }}
                 textAlign="center"
               >
@@ -75,7 +73,7 @@ export default function Teste({ projetos }: ProjectProps) {
             color="black"
             fontWeight="normal"
             _hover={{ color: 'white', bg: 'orange.500', borderRadius: '10px' }}
-            size={{ base: '100%', md: 'md' }}
+            size={{ base: 'sm', md: 'md' }}
             px={{ base: '4', md: 'md' }}
             onClick={() => setShowAll(true)}
           >
@@ -122,11 +120,11 @@ export const getStaticProps: GetStaticProps = async () => {
       'projeto.title',
     ],
   })
-  const projetos = response.results
+  const projects = response.results
 
   return {
     props: {
-      projetos,
+      projects,
     },
   }
 }
