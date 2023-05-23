@@ -16,7 +16,7 @@ export default function Home() {
         direction="column"
         align="center"
         justify="center"
-        height="calc(100vh - 82px)"
+        h="calc(100vh - 82px)"
       >
         <MotionEffect>
           <Box fontWeight="medium">
