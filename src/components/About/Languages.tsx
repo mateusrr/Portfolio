@@ -15,7 +15,7 @@ const LanguagesDefinition = ({ href, icon: Icon, ariaLabel }: any) => {
       bg="blue.500"
       p={{ base: 'auto', md: '3' }}
       m={1}
-      h="40px"
+      h="35px"
       borderRadius={8}
       _hover={{
         bg: 'blue.600',

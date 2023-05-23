@@ -36,7 +36,7 @@ const Skills = () => {
           borderBottom="2px solid"
           borderBottomColor="blue.500"
           borderRight={110}
-          w={{ base: '75px', md: '100px' }}
+          w={{ base: '70px', md: '100px' }}
         >
           Soft Skills
         </Text>

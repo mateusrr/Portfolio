@@ -34,7 +34,7 @@ export default function Teste({ projects }: ProjectProps) {
         m={{ base: '5vh', md: '20vh' }}
       >
         <SimpleGrid
-          maxW={{ base: '500px', md: '800px' }}
+          maxW={{ base: '500px', md: '700px' }}
           gap={{ base: '4', md: '7' }}
           px={{ base: 4, md: 0 }}
         >
