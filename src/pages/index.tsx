@@ -4,8 +4,6 @@ import Header from '@/components/Header/index'
 import { BsLinkedin, BsGithub } from 'react-icons/bs'
 import SocialMedia from '../components/SocialMedia'
 import MotionEffect from '@/components/MotionEffect'
-import ParticlesBackground from '../components/ParticlesBackground'
-// ajustar responsive mobile home
 
 export default function Home() {
   return (
@@ -18,21 +16,21 @@ export default function Home() {
         h="calc(100vh - 100px)"
       >
         <MotionEffect>
-          <Flex gap={{ base: '0', md: '10px' }}>
+          <Flex gap={{ base: '0', md: '30px' }}>
             <Box m="auto">
-              <Heading as="h2" size="md" fontWeight="normal">
+              <Heading as="h2" size="md" fontWeight="medium">
                 Olá! Eu sou,
               </Heading>
               <Heading
                 as="h1"
-                fontSize={{ base: '70px', md: '100px' }}
+                fontSize={{ base: '70px', md: '90px' }}
                 fontWeight="bold"
                 lineHeight={1}
               >
                 Mateus
                 <span style={{ color: '#3182CE', fontSize: '3rem' }}>.</span>
               </Heading>
-              <Text fontSize="md" fontWeight="normal">
+              <Text fontSize="md" fontWeight="medium">
                 Desenvolvedor Front-End.
               </Text>
 
@@ -57,7 +55,6 @@ export default function Home() {
             />
           </Flex>
         </MotionEffect>
-        <ParticlesBackground />
       </Flex>
     </>
   )

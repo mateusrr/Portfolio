@@ -26,7 +26,7 @@ export default function Header() {
       >
         <Box
           fontSize={{ base: 'md', md: 'xl' }} // Tamanho da fonte responsiva para mobile e desktop
-          fontWeight="medium"
+          fontWeight="bold"
           display="flex"
           alignItems="center"
           gap={1}

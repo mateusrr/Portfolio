@@ -11,6 +11,7 @@ const linkProps: Omit<LinkProps, 'position'> & {
   pos: 'relative',
   display: 'inline-block',
   marginRight: '3',
+  fontWeight: 'medium',
   _hover: {
     _before: {
       width: '100%',
