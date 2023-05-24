@@ -1,5 +1,6 @@
-import { Box, IconButton } from '@chakra-ui/react'
+import { Flex, IconButton } from '@chakra-ui/react'
 import React from 'react'
+import { BsGithub, BsLinkedin } from 'react-icons/bs'
 
 interface ZoomIconProps {
   href: string
@@ -7,11 +8,11 @@ interface ZoomIconProps {
   ariaLabel: string
 }
 
-export default function ZoomIcon({ href, icon, ariaLabel }: ZoomIconProps) {
+const ButtonSocialMedia = ({ href, icon, ariaLabel }: ZoomIconProps) => {
   const Icon = icon
 
   return (
-    <Box>
+    <>
       <IconButton
         transition="all 0.2s ease-out"
         _hover={{
@@ -23,11 +24,28 @@ export default function ZoomIcon({ href, icon, ariaLabel }: ZoomIconProps) {
         href={href}
         aria-label={ariaLabel}
         icon={<Icon />}
-        fontSize={27}
+        fontSize={{ base: '20px', md: '30px' }}
         target="_blank"
         bg="none"
-        gap={4}
+        m={1}
       />
-    </Box>
+    </>
+  )
+}
+
+export default function ZoomIcon() {
+  return (
+    <Flex direction="row" justify="center">
+      <ButtonSocialMedia
+        href="https://github.com/mateusrr"
+        icon={BsGithub}
+        ariaLabel="Github"
+      />
+      <ButtonSocialMedia
+        href="https://linkedin.com/in/mateusrr"
+        icon={BsLinkedin}
+        ariaLabel="Linkedin"
+      />
+    </Flex>
   )
 }

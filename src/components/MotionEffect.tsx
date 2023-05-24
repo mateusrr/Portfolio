@@ -14,7 +14,7 @@ const MotionEffect = ({ children }: MotionEffectProps) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       justify="center"
-      textAlign="left"
+      textAlign="center"
     >
       {children}
     </Motion>
