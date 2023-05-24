@@ -45,7 +45,7 @@ const Skills = () => {
             listStyleType="none"
             marginStart={-4}
             textAlign="left"
-            fontSize={{ base: 'auto', md: 'md' }}
+            fontSize={{ base: 'xs', md: 'md' }}
           >
             Trabalho em equipe | Organização | Proativo | Autogerenciamento |
             Design

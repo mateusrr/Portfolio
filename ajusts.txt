@@ -3,7 +3,7 @@ responsivo
 add image
 
 - About
-terminar responsivo text
+terminar responsivo text (aumentar largura da linha e aumentar um pouco mais o texto para melhor visualização.)
 
 - Create hobby
 
