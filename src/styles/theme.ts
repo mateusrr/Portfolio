@@ -1,7 +1,13 @@
 // styles/theme.js
-import { extendTheme } from '@chakra-ui/react'
+import { type ThemeConfig, extendTheme } from '@chakra-ui/react'
+
+const config: ThemeConfig = {
+  // initialColorMode: 'light',
+  useSystemColorMode: false,
+}
 
 const theme = extendTheme({
+  config,
   styles: {
     global: (props: { colorMode: string }) => ({
       'html, body': {
@@ -39,9 +45,9 @@ const theme = extendTheme({
     '6xl': '64px',
   },
   fontWeights: {
-    normal: 400,
-    medium: 600,
-    bold: 900,
+    normal: 300,
+    medium: 400,
+    bold: 700,
   },
   lineHeights: {
     normal: '1.5',

@@ -1,11 +1,29 @@
-import {
-  Box,
-  ListItem,
-  SimpleGrid,
-  Text,
-  UnorderedList,
-} from '@chakra-ui/react'
+import { Box, SimpleGrid, Text } from '@chakra-ui/react'
 import Languages from './Languages'
+import React from 'react'
+import ListItems from './ListItems'
+
+interface TextSkillsProps {
+  children: React.ReactNode
+  w: {
+    base: string
+    md: string
+  }
+}
+const TextSkills = ({ children, w }: TextSkillsProps) => {
+  return (
+    <Text
+      mt={8}
+      mb={3}
+      fontWeight="medium"
+      borderBottom="2px solid"
+      borderBottomColor="blue.500"
+      w={w}
+    >
+      {children}
+    </Text>
+  )
+}
 
 const Skills = () => {
   return (
@@ -15,42 +33,13 @@ const Skills = () => {
       gap={{ base: '', md: '8' }}
     >
       <Box>
-        <Text
-          mt={8}
-          mb={3}
-          fontWeight="medium"
-          borderBottom="2px solid"
-          borderBottomColor="blue.500"
-          w={{ base: '80px', md: '110px' }}
-        >
-          Hard Skills
-        </Text>
-
+        <TextSkills w={{ base: '80px', md: '110px' }}>Hard Skills</TextSkills>
         <Languages />
       </Box>
+
       <Box>
-        <Text
-          mt={8}
-          mb={3}
-          fontWeight="medium"
-          borderBottom="2px solid"
-          borderBottomColor="blue.500"
-          borderRight={110}
-          w={{ base: '70px', md: '100px' }}
-        >
-          Soft Skills
-        </Text>
-        <UnorderedList>
-          <ListItem
-            listStyleType="none"
-            marginStart={-4}
-            textAlign="left"
-            fontSize={{ base: 'xs', md: 'md' }}
-          >
-            Trabalho em equipe | Organização | Proativo | Autogerenciamento |
-            Design
-          </ListItem>
-        </UnorderedList>
+        <TextSkills w={{ base: '70px', md: '100px' }}>Soft Skills</TextSkills>
+        <ListItems />
       </Box>
     </SimpleGrid>
   )

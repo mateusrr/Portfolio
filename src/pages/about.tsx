@@ -12,7 +12,7 @@ export default function About() {
         <Grid justifyContent="center">
           <Box
             maxW={{ base: 'auto', md: '800px' }}
-            fontSize="2.3vw"
+            fontSize={{ base: '0.70rem', md: '1rem' }}
             m="10vw"
             textAlign="left"
           >
@@ -33,9 +33,9 @@ export default function About() {
                 query={['objetivo', 'resultados', 'programação']}
                 styles={{ color: 'orange.400' }}
               >
-                Meu objetivo é ingressar na área de programação, contribuindo
-                com meus conhecimentos, aprendendo na empresa em que estiver
-                para poder crescer pessoalmente e profissionalmente.
+                Tenho por objetivo ingressar na área de programação,
+                contribuindo com meus conhecimentos, aprendendo na empresa em
+                que estiver para poder crescer pessoalmente e profissionalmente.
               </Highlight>
             </Text>
 
