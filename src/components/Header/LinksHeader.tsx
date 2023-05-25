@@ -8,7 +8,7 @@ import {
   useColorMode,
   Icon,
   useDisclosure,
-  useMediaQuery,
+  useBreakpointValue,
 } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import { FiMenu, FiMoon, FiSun } from 'react-icons/fi'
@@ -41,7 +41,7 @@ const linkProps: Omit<LinkProps, 'position'> & {
 export default function LinksHeader() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const { colorMode, toggleColorMode } = useColorMode()
-  const [isMobile] = useMediaQuery('(max-width: 768px)')
+  const isMobile = useBreakpointValue({ base: '768px', md: '' })
 
   const handleColorChange = () => {
     toggleColorMode()
