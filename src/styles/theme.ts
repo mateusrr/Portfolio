@@ -11,6 +11,8 @@ const theme = extendTheme({
   styles: {
     global: (props: { colorMode: string }) => ({
       'html, body': {
+        padding: 0,
+        margin: 0,
         background: props.colorMode === 'light' ? 'white' : 'gray.900',
         color: props.colorMode === 'light' ? 'gray.800' : 'gray.100',
         transition: 'background-color 0.2s',
@@ -29,8 +31,8 @@ const theme = extendTheme({
     },
   },
   fonts: {
-    body: "'Space Grotesk', sans-serif",
-    heading: "'Space Grotesk', sans-serif",
+    body: "'Poppins', sans-serif",
+    heading: "'Poppins', sans-serif",
   },
   fontSizes: {
     xs: '12px',
@@ -45,9 +47,10 @@ const theme = extendTheme({
     '6xl': '64px',
   },
   fontWeights: {
-    normal: 300,
-    medium: 400,
+    normal: 400,
+    medium: 500,
     bold: 700,
+    extrabold: 800,
   },
   lineHeights: {
     normal: '1.5',

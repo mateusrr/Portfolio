@@ -14,7 +14,7 @@ const ButtonsAcess = ({ href, children }: ButtonAcess) => {
         mb={{ base: 2, md: 20 }}
         bg="blue.500"
         color="gray.100"
-        fontWeight="normal"
+        fontWeight="medium"
         _hover={{ bg: 'blue.600', color: 'white' }}
         as="a"
         href={href}

@@ -35,7 +35,7 @@ const ButtonSocialMedia = ({ href, icon, ariaLabel }: ZoomIconProps) => {
 
 export default function ZoomIcon() {
   return (
-    <Flex direction="row" justify="center">
+    <Flex direction="row" justify="left">
       <ButtonSocialMedia
         href="https://github.com/mateusrr"
         icon={BsGithub}
