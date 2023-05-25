@@ -7,7 +7,6 @@ interface MotionEffectProps {
 }
 const MotionEffect = ({ children }: MotionEffectProps) => {
   const Motion = motion(Box)
-  // ajustar responsive mobile home
   return (
     <Motion
       initial={{ opacity: 0, y: -20 }}

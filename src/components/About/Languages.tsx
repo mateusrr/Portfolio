@@ -4,7 +4,7 @@ import * as Icons from 'react-icons/si'
 const LanguagesDefinition = ({ href, icon: Icon, ariaLabel }: any) => {
   return (
     <IconButton
-      fontSize={{ base: '15px', md: '21px' }}
+      fontSize={{ base: '20px', md: '30px' }}
       variant="outline"
       border="none"
       color="gray.100"
@@ -15,7 +15,7 @@ const LanguagesDefinition = ({ href, icon: Icon, ariaLabel }: any) => {
       bg="blue.500"
       p={{ base: 'auto', md: '3' }}
       m={1}
-      h="35px"
+      h="45px"
       borderRadius={8}
       _hover={{
         bg: 'blue.600',
