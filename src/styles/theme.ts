@@ -13,7 +13,10 @@ const theme = extendTheme({
       'html, body': {
         padding: 0,
         margin: 0,
-        background: props.colorMode === 'light' ? 'white' : 'gray.900',
+        background: props.colorMode === 'light' ? 'white' : 'url(/bg.png)',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
         color: props.colorMode === 'light' ? 'gray.800' : 'gray.100',
         transition: 'background-color 0.2s',
       },
