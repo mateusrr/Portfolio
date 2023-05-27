@@ -1,7 +1,6 @@
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
 import { Box } from '@chakra-ui/react'
 import React from 'react'
-// import { projectsData } from '@/components/Projects/ProjectsData'
 
 interface EffectProps {
   children?: React.ReactNode

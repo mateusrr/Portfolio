@@ -21,14 +21,13 @@ export default function Home() {
             <Text fontWeight="extrabold">Mateus</Text>
             <Text fontWeight="extrabold">
               Rocha
-              <span style={{ color: '#3182CE', fontSize: '3rem' }}>.</span>
+              <span style={{ color: '#DD6B20', fontSize: '3rem' }}>.</span>
             </Text>
 
             <Flex m={{ base: '', md: '5px' }} align="left">
               <Text
                 fontSize={{ base: 'sm', md: 'md' }}
                 fontWeight="medium"
-                color="blue.500"
                 mr={5}
               >
                 Desenvolvedor Front-End
