@@ -59,7 +59,7 @@ export default function Teste({ projects }: ProjectProps) {
                   />
                 </Effect>
 
-                <Box fontSize={{ base: 'sm', md: '' }} m={4} textAlign="center">
+                <Box fontSize={{ base: 'xs', md: '' }} m={4} textAlign="center">
                   <Text fontWeight="bold">{projeto.data.title[0].text}</Text>
                   <Text>{projeto.data.description[0].text}</Text>
                 </Box>
