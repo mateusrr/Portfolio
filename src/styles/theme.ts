@@ -38,6 +38,8 @@ const theme = extendTheme({
     heading: "'Poppins', sans-serif",
   },
   fontSizes: {
+    xxxs: '8px',
+    xxs: '10px',
     xs: '12px',
     sm: '14px',
     md: '18px',

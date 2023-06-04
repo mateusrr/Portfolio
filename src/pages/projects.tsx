@@ -44,7 +44,7 @@ export default function Teste({ projects }: ProjectProps) {
       >
         <SimpleGrid
           maxW={{ base: '500px', md: '700px' }}
-          gap={{ base: '4', md: '7' }}
+          // gap={{ base: '4', md: '7' }}
           px={{ base: 4, md: 0 }}
         >
           {projectsAll
@@ -59,7 +59,7 @@ export default function Teste({ projects }: ProjectProps) {
                   />
                 </Effect>
 
-                <Box fontSize={{ base: 'xs', md: '' }} m={4} textAlign="center">
+                <Box fontSize={{ base: 'xxxs', md: '' }} m={4} textAlign="left">
                   <Text fontWeight="bold">{projeto.data.title[0].text}</Text>
                   <Text>{projeto.data.description[0].text}</Text>
                 </Box>
