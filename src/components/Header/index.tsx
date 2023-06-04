@@ -13,7 +13,7 @@ export default function Header() {
         justify="space-between"
         direction="row"
         h="80px"
-        maxW={{ base: '70%', md: '800px' }}
+        maxW={{ base: '80%', md: '800px' }}
         m="auto"
         transition="background-color 0.2s"
       >
