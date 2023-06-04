@@ -2,7 +2,15 @@ import Header from '@/components/Header'
 import ButtonsAcess from '@/components/Projects/ButtonsAcess'
 import Effect from '@/components/Projects/Effect'
 import { getPrismicClient } from '@/services/prismic'
-import { Image, Link, Flex, SimpleGrid, Text, Button } from '@chakra-ui/react'
+import {
+  Image,
+  Link,
+  Flex,
+  SimpleGrid,
+  Text,
+  Button,
+  Box,
+} from '@chakra-ui/react'
 import { GetStaticProps } from 'next'
 import React, { useState } from 'react'
 
@@ -13,6 +21,7 @@ type Project = {
     title: Array<{ text: string }>
     deploy: { url: string }
     repository: { url: string }
+    description: Array<{ text: string }>
   }
 }
 
@@ -47,6 +56,11 @@ export default function Teste({ projects }: ProjectProps) {
                   marginBottom="10px"
                 />
               </Effect>
+
+              <Box fontSize={{ base: 'sm', md: '' }} m={4} textAlign="center">
+                <Text fontWeight="bold">{projeto.data.title[0].text}</Text>
+                <Text>{projeto.data.description[0].text}</Text>
+              </Box>
 
               <Flex
                 gap={{ base: '2', md: '2' }}
@@ -115,6 +129,7 @@ export const getStaticProps: GetStaticProps = async () => {
       'projeto.repository',
       'projeto.image',
       'projeto.title',
+      'projeto.description',
     ],
   })
   const projects = response.results
