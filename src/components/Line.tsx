@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react'
 
+// Linha do Header
 export const Line = () => (
   <Box
     display="flex"

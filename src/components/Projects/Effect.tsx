@@ -2,6 +2,7 @@ import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
 import { Box } from '@chakra-ui/react'
 import React from 'react'
 
+// Efeito dos cards dos projetos
 interface EffectProps {
   children?: React.ReactNode
 }

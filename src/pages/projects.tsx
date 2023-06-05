@@ -37,7 +37,7 @@ export default function Projects({ projects }: ProjectProps) {
       <Flex
         direction="column"
         align="center"
-        justify="center"
+        // justify="center"
         m={{ base: '5vh', md: '20vh' }}
       >
         <SimpleGrid
@@ -58,22 +58,17 @@ export default function Projects({ projects }: ProjectProps) {
               <Box fontSize={{ base: 'xxxs', md: 'md' }} m={4} textAlign="left">
                 <Text fontWeight="bold">{projeto.data.title[0].text}</Text>
                 <Text>{projeto.data.description[0].text}</Text>
+
+                <Flex gap="2" justify="left" mb={{ base: '7', md: '0' }} mt={2}>
+                  <ButtonsAcess href={projeto.data.deploy.url}>
+                    Deploy
+                  </ButtonsAcess>
+
+                  <ButtonsAcess href={projeto.data.repository.url}>
+                    Repositório
+                  </ButtonsAcess>
+                </Flex>
               </Box>
-
-              <Flex
-                gap={{ base: '2', md: '2' }}
-                justify={{ base: 'center', md: 'center' }}
-                mb={{ base: '7', md: '0' }}
-                textAlign="center"
-              >
-                <ButtonsAcess href={projeto.data.deploy.url}>
-                  Deploy
-                </ButtonsAcess>
-
-                <ButtonsAcess href={projeto.data.repository.url}>
-                  Repositório
-                </ButtonsAcess>
-              </Flex>
             </React.Fragment>
           ))}
         </SimpleGrid>

@@ -3,6 +3,7 @@ import { Languages } from './Languages'
 import React from 'react'
 import { ListItems } from './ListItems'
 
+// junção dos componentes Languages e ListItems
 interface TextSkillsProps {
   children: React.ReactNode
   w: {

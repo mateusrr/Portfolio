@@ -1,6 +1,6 @@
-import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Button } from '@chakra-ui/react'
 
+// Component usado para os buttons de Deploy e Repository
 interface ButtonAcess {
   href?: string
   children: string
@@ -19,10 +19,10 @@ export const ButtonsAcess = ({ href, children }: ButtonAcess) => {
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        size={{ base: 'xs', md: 'sm' }}
+        size={{ base: 'xxs', md: 'sm' }}
+        p="3px"
       >
         {children}
-        <ExternalLinkIcon ml={1} fontSize={{ base: 'xs', md: 'sm' }} />
       </Button>
     </>
   )

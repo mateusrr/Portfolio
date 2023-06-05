@@ -1,6 +1,7 @@
 import { IconButton, Link as ChakraLink, Box } from '@chakra-ui/react'
 import * as Icons from 'react-icons/si'
 
+// definições para o button das linguagens.
 const LanguagesDefinition = ({ href, icon: Icon, ariaLabel }: any) => {
   return (
     <IconButton
@@ -26,6 +27,7 @@ const LanguagesDefinition = ({ href, icon: Icon, ariaLabel }: any) => {
   )
 }
 
+// const LanguageDefinition sendo repassada a cada uma das linguagens separadamente.
 export function Languages() {
   return (
     <>

@@ -2,6 +2,7 @@ import { Icon, ListItem, UnorderedList } from '@chakra-ui/react'
 import { VscCircleFilled } from 'react-icons/vsc'
 import React from 'react'
 
+// Softskills
 const IconCircleFilld = () => {
   return (
     <>

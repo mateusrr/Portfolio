@@ -6,7 +6,7 @@ import {
   Text,
   useBreakpointValue,
 } from '@chakra-ui/react'
-import { MotionEffect } from '@/components/MotionEffect'
+import { EffectFade } from '@/components/EffectFade'
 import { Skills } from '@/components/About/Skills'
 
 export default function About() {
@@ -16,7 +16,7 @@ export default function About() {
 
   return (
     <>
-      <MotionEffect>
+      <EffectFade>
         <Grid justifyContent="center">
           <Box
             maxW={maxBoxWidth}
@@ -60,7 +60,7 @@ export default function About() {
             <Skills />
           </Box>
         </Grid>
-      </MotionEffect>
+      </EffectFade>
     </>
   )
 }

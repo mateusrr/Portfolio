@@ -1,12 +1,12 @@
 import React from 'react'
 import { Box, Flex, Image, Text } from '@chakra-ui/react'
 import SocialMedia from '@/components/SocialMedia'
-import { MotionEffect } from '@/components/MotionEffect'
+import { EffectFade } from '@/components/EffectFade'
 
 export default function Home() {
   return (
     <>
-      <MotionEffect>
+      <EffectFade>
         <Flex
           justify="center"
           alignItems="center"
@@ -39,7 +39,7 @@ export default function Home() {
             w={{ base: '225px', md: '450px' }}
           />
         </Flex>
-      </MotionEffect>
+      </EffectFade>
     </>
   )
 }

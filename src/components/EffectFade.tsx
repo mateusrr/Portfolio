@@ -2,11 +2,12 @@ import { Box } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import React from 'react'
 
-interface MotionEffectProps {
+// Efeito de fade para conteúdos do início e sobre.
+interface EffectFadeProps {
   children?: React.ReactNode
 }
 
-export const MotionEffect = ({ children }: MotionEffectProps) => {
+export const EffectFade = ({ children }: EffectFadeProps) => {
   const Motion = motion(Box)
   return (
     <Motion
