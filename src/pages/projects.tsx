@@ -29,7 +29,7 @@ interface ProjectProps {
   projects: Project[]
 }
 
-export default function Teste({ projects }: ProjectProps) {
+export default function Projects({ projects }: ProjectProps) {
   const [showAll, setShowAll] = useState(false)
   const projectsAll = showAll ? projects : projects.slice(0, 2)
 
