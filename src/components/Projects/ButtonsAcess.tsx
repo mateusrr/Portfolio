@@ -19,7 +19,7 @@ export const ButtonsAcess = ({ href, children }: ButtonAcess) => {
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        size={{ base: 'xxs', md: 'sm' }}
+        size={{ base: 'xs', md: 'sm' }}
         p="3px"
       >
         {children}
