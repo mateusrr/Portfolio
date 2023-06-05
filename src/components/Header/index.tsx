@@ -1,10 +1,10 @@
 import { Box, Flex, Icon } from '@chakra-ui/react'
 import Link from 'next/link'
 import { FaLaptopCode } from 'react-icons/fa'
-import Line from '../Line'
-import LinksHeader from './LinksHeader'
+import { Line } from '../Line'
+import { LinksHeader } from './LinksHeader'
 
-export default function Header() {
+export function Header() {
   return (
     <>
       <Flex

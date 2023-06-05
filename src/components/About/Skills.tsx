@@ -1,7 +1,7 @@
 import { Box, SimpleGrid, Text } from '@chakra-ui/react'
-import Languages from './Languages'
+import { Languages } from './Languages'
 import React from 'react'
-import ListItems from './ListItems'
+import { ListItems } from './ListItems'
 
 interface TextSkillsProps {
   children: React.ReactNode
@@ -25,7 +25,7 @@ const TextSkills = ({ children, w }: TextSkillsProps) => {
   )
 }
 
-const Skills = () => {
+export const Skills = () => {
   return (
     <SimpleGrid
       templateColumns={{ base: '', md: 'repeat(2, 1fr)' }}
@@ -44,4 +44,3 @@ const Skills = () => {
     </SimpleGrid>
   )
 }
-export default Skills

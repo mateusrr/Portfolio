@@ -6,7 +6,7 @@ interface ButtonAcess {
   children: string
 }
 
-const ButtonsAcess = ({ href, children }: ButtonAcess) => {
+export const ButtonsAcess = ({ href, children }: ButtonAcess) => {
   return (
     <>
       <Button
@@ -27,5 +27,3 @@ const ButtonsAcess = ({ href, children }: ButtonAcess) => {
     </>
   )
 }
-
-export default ButtonsAcess

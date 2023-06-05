@@ -26,7 +26,7 @@ const LanguagesDefinition = ({ href, icon: Icon, ariaLabel }: any) => {
   )
 }
 
-export default function Languages() {
+export function Languages() {
   return (
     <>
       <Box>

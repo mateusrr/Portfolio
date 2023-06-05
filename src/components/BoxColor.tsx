@@ -1,6 +1,6 @@
 import { Box, useColorMode } from '@chakra-ui/react'
 
-const BoxColor = ({ children }: any) => {
+export const BoxColor = ({ children }: any) => {
   const { colorMode } = useColorMode()
 
   return (
@@ -13,5 +13,3 @@ const BoxColor = ({ children }: any) => {
     </Box>
   )
 }
-
-export default BoxColor

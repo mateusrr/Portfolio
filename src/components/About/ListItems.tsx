@@ -14,7 +14,7 @@ const IconCircleFilld = () => {
   )
 }
 
-const ListItems = () => {
+export const ListItems = () => {
   return (
     <>
       <UnorderedList>
@@ -34,5 +34,3 @@ const ListItems = () => {
     </>
   )
 }
-
-export default ListItems

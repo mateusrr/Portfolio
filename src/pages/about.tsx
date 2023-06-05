@@ -6,9 +6,8 @@ import {
   Text,
   useBreakpointValue,
 } from '@chakra-ui/react'
-import Header from '@/components/Header/index'
-import MotionEffect from '@/components/MotionEffect'
-import Skills from '@/components/About/Skills'
+import { MotionEffect } from '@/components/MotionEffect'
+import { Skills } from '@/components/About/Skills'
 
 export default function About() {
   const maxBoxWidth = useBreakpointValue({ base: 'auto', md: '800px' })
@@ -17,7 +16,6 @@ export default function About() {
 
   return (
     <>
-      <Header />
       <MotionEffect>
         <Grid justifyContent="center">
           <Box

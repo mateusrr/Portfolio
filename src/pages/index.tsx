@@ -1,13 +1,11 @@
 import React from 'react'
 import { Box, Flex, Image, Text } from '@chakra-ui/react'
-import Header from '@/components/Header/index'
-import SocialMedia from '../components/SocialMedia'
-import MotionEffect from '@/components/MotionEffect'
+import SocialMedia from '@/components/SocialMedia'
+import { MotionEffect } from '@/components/MotionEffect'
 
 export default function Home() {
   return (
     <>
-      <Header />
       <MotionEffect>
         <Flex
           justify="center"

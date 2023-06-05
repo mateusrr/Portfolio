@@ -5,7 +5,7 @@ import React from 'react'
 interface EffectProps {
   children?: React.ReactNode
 }
-export default function Effect({ children }: EffectProps) {
+export function Effect({ children }: EffectProps) {
   // const projects = projectsData
   const x = useMotionValue(250)
   const y = useMotionValue(150)

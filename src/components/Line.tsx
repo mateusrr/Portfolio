@@ -1,6 +1,6 @@
 import { Box } from '@chakra-ui/react'
 
-const Line = () => (
+export const Line = () => (
   <Box
     display="flex"
     justifyContent="center"
@@ -10,5 +10,3 @@ const Line = () => (
     margin="auto"
   />
 )
-
-export default Line

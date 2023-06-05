@@ -1,6 +1,5 @@
-import Header from '@/components/Header'
-import ButtonsAcess from '@/components/Projects/ButtonsAcess'
-import Effect from '@/components/Projects/Effect'
+import { ButtonsAcess } from '@/components/Projects/ButtonsAcess'
+import { Effect } from '@/components/Projects/Effect'
 import { getPrismicClient } from '@/services/prismic'
 import {
   Image,
@@ -35,7 +34,6 @@ export default function Projects({ projects }: ProjectProps) {
 
   return (
     <>
-      <Header />
       <Flex
         direction="column"
         align="center"
@@ -47,43 +45,37 @@ export default function Projects({ projects }: ProjectProps) {
           // gap={{ base: '4', md: '7' }}
           px={{ base: 4, md: 0 }}
         >
-          {projectsAll
-            .sort((a, b) => Number(b.uid) - Number(a.uid))
-            .map((projeto) => (
-              <React.Fragment key={projeto.uid}>
-                <Effect>
-                  <Image
-                    src={projeto.data.image.url}
-                    alt={projeto.data.title[0].text}
-                    marginBottom="10px"
-                  />
-                </Effect>
+          {projectsAll.map((projeto) => (
+            <React.Fragment key={projeto.uid}>
+              <Effect>
+                <Image
+                  src={projeto.data.image.url}
+                  alt={projeto.data.title[0].text}
+                  marginBottom="10px"
+                />
+              </Effect>
 
-                <Box
-                  fontSize={{ base: 'xxxs', md: 'md' }}
-                  m={4}
-                  textAlign="left"
-                >
-                  <Text fontWeight="bold">{projeto.data.title[0].text}</Text>
-                  <Text>{projeto.data.description[0].text}</Text>
-                </Box>
+              <Box fontSize={{ base: 'xxxs', md: 'md' }} m={4} textAlign="left">
+                <Text fontWeight="bold">{projeto.data.title[0].text}</Text>
+                <Text>{projeto.data.description[0].text}</Text>
+              </Box>
 
-                <Flex
-                  gap={{ base: '2', md: '2' }}
-                  justify={{ base: 'center', md: 'center' }}
-                  mb={{ base: '7', md: '0' }}
-                  textAlign="center"
-                >
-                  <ButtonsAcess href={projeto.data.deploy.url}>
-                    Deploy
-                  </ButtonsAcess>
+              <Flex
+                gap={{ base: '2', md: '2' }}
+                justify={{ base: 'center', md: 'center' }}
+                mb={{ base: '7', md: '0' }}
+                textAlign="center"
+              >
+                <ButtonsAcess href={projeto.data.deploy.url}>
+                  Deploy
+                </ButtonsAcess>
 
-                  <ButtonsAcess href={projeto.data.repository.url}>
-                    Repositório
-                  </ButtonsAcess>
-                </Flex>
-              </React.Fragment>
-            ))}
+                <ButtonsAcess href={projeto.data.repository.url}>
+                  Repositório
+                </ButtonsAcess>
+              </Flex>
+            </React.Fragment>
+          ))}
         </SimpleGrid>
 
         {!showAll && (
@@ -139,6 +131,7 @@ export const getStaticProps: GetStaticProps = async () => {
     ],
   })
   const projects = response.results
+  projects.sort((a, b) => Number(b.uid) - Number(a.uid))
 
   return {
     props: {

@@ -38,7 +38,7 @@ const linkProps: Omit<LinkProps, 'position'> & {
   },
 }
 
-export default function LinksHeader() {
+export function LinksHeader() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const { colorMode, toggleColorMode } = useColorMode()
   const isMobile = useBreakpointValue({ base: '768px', md: '' })

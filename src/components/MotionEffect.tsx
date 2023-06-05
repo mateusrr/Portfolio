@@ -5,7 +5,8 @@ import React from 'react'
 interface MotionEffectProps {
   children?: React.ReactNode
 }
-const MotionEffect = ({ children }: MotionEffectProps) => {
+
+export const MotionEffect = ({ children }: MotionEffectProps) => {
   const Motion = motion(Box)
   return (
     <Motion
@@ -18,5 +19,3 @@ const MotionEffect = ({ children }: MotionEffectProps) => {
     </Motion>
   )
 }
-
-export default MotionEffect
