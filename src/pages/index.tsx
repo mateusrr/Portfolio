@@ -25,7 +25,7 @@ export default function Home() {
             <Flex m={{ base: '', md: '5px' }} align="left">
               <Text
                 fontSize={{ base: 'sm', md: 'md' }}
-                fontWeight="medium"
+                fontWeight="normal"
                 mr={5}
               >
                 Desenvolvedor Front-End

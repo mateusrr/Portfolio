@@ -27,9 +27,9 @@ export default function About() {
             <Text>
               <Highlight
                 query={['Engenharia da Computação', 'Front-end']}
-                styles={{ color: 'orange.400' }}
+                styles={{ color: 'blue.600' }}
               >
-                Estou no 7º período de Engenharia da Computação pela Uniceuma em
+                Estou no 8º período de Engenharia da Computação pela Uniceuma em
                 São Luís - Maranhão. Meu foco tem sido o Desenvolvimento
                 Front-end e tenho me dedicado a estudar as principais
                 tecnologias da área.
@@ -39,7 +39,7 @@ export default function About() {
             <Text mt={4}>
               <Highlight
                 query={['objetivo', 'resultados', 'programação']}
-                styles={{ color: 'orange.400' }}
+                styles={{ color: 'blue.600' }}
               >
                 Tenho por objetivo ingressar na área de programação,
                 contribuindo com meus conhecimentos, aprendendo na empresa em
@@ -50,7 +50,7 @@ export default function About() {
             <Text mt={4}>
               <Highlight
                 query={['resultados', 'programação']}
-                styles={{ color: 'orange.400' }}
+                styles={{ color: 'blue.600' }}
               >
                 Acredito que posso agregar valor à empresa para atingir os
                 resultados esperados da organização.

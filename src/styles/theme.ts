@@ -13,7 +13,7 @@ const theme = extendTheme({
       'html, body': {
         padding: 0,
         margin: 0,
-        background: props.colorMode === 'light' ? 'white' : 'url(/bg.png)',
+        background: props.colorMode === 'light' ? 'white' : 'gray.900',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundAttachment: 'fixed',
@@ -34,8 +34,8 @@ const theme = extendTheme({
     },
   },
   fonts: {
-    body: "'Poppins', sans-serif",
-    heading: "'Poppins', sans-serif",
+    body: "'Raleway', sans-serif",
+    heading: "'Raleway', sans-serif",
   },
   fontSizes: {
     xxxs: '8px',

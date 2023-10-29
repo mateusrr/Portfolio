@@ -76,9 +76,9 @@ export default function Projects({ projects }: ProjectProps) {
         {!showAll && (
           <Button
             mt={8}
-            bg="orange.500"
+            bg="blue.500"
             fontWeight="medium"
-            _hover={{ bg: 'orange.400', borderRadius: '10px' }}
+            _hover={{ bg: 'blue.600', borderRadius: '10px' }}
             size={{ base: 'sm', md: 'md' }}
             px={{ base: '4', md: 'md' }}
             onClick={() => setShowAll(true)}
@@ -95,12 +95,12 @@ export default function Projects({ projects }: ProjectProps) {
               borderRadius={5}
               p={1}
               h={8}
-              bg="orange.500"
+              bg="blue.500"
               target="_blank"
               href="https://github.com/mateusrr?tab=repositories"
               fontWeight="normal"
               _hover={{
-                bg: 'orange.400',
+                bg: 'blue.600',
                 borderRadius: '10px',
               }}
             >

@@ -81,7 +81,7 @@ export function Effect({ children }: EffectProps) {
           aspectRatio: '16/9',
           borderRadius: '10px',
           backgroundColor: 'transparent',
-          boxShadow: '5px 8px 10px rgba(0, 0, 0, 0.1)',
+          boxShadow: '5px 8px 10px rgba(0, 0, 0, 0.2)',
           transition: 'box-shadow 0.2s',
           rotateX,
           rotateY,

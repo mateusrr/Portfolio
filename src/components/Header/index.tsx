@@ -25,7 +25,7 @@ export function Header() {
           gap={1}
         >
           <Link href="/">MR</Link>
-          <Icon as={FaLaptopCode} color="orange.400" />
+          <Icon as={FaLaptopCode} color="blue.600" />
         </Box>
 
         <LinksHeader />
