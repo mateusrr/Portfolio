@@ -26,24 +26,25 @@ export default function About() {
           >
             <Text>
               <Highlight
-                query={['Engenharia da Computação', 'Front-end']}
+                query={['Engenharia da Computação', 'especializado']}
                 styles={{ color: 'blue.600' }}
               >
-                Estou no 8º período de Engenharia da Computação pela Uniceuma em
-                São Luís - Maranhão. Meu foco tem sido o Desenvolvimento
-                Front-end e tenho me dedicado a estudar as principais
-                tecnologias da área.
+                Sou graduado em Engenharia da Computação, além disso tenho me
+                especializado em Desenvolvimento Front-end, explorando as
+                principais tecnologias dessa área e desenvolvendo projetos
+                práticos com os conhecimentos adquiridos até então.
               </Highlight>
             </Text>
 
             <Text mt={4}>
               <Highlight
-                query={['objetivo', 'resultados', 'programação']}
+                query={['compromisso', 'oportunidades']}
                 styles={{ color: 'blue.600' }}
               >
-                Tenho por objetivo ingressar na área de programação,
-                contribuindo com meus conhecimentos, aprendendo na empresa em
-                que estiver para poder crescer pessoalmente e profissionalmente.
+                Busco ingressar nas oportunidades que surgir no campo da
+                tecnologia, mantendo um compromisso de aprimorar as minhas
+                habilidades, onde poderei não apenas contribuir com meu
+                conhecimento, mas também aprender ativamente.
               </Highlight>
             </Text>
 
@@ -53,7 +54,8 @@ export default function About() {
                 styles={{ color: 'blue.600' }}
               >
                 Acredito que posso agregar valor à empresa para atingir os
-                resultados esperados da organização.
+                resultados esperados da organização, assim espero crescer
+                pessoalmente e profissionalmente.
               </Highlight>
             </Text>
 
