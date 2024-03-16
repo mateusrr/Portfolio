@@ -1,7 +1,7 @@
 <div align="center">
   <h1>Bem-vindo(a) ao meu Portfólio!</h1>
 
-![ezgif com-crop](https://github.com/mateusrr/Portfolio/assets/72825535/b8e8131b-045b-4827-8f64-94dc478eca43)
+![tela](https://github.com/mateusrr/Portfolio/assets/72825535/1287cd1f-d7a2-4b4d-9738-280f60963716)
 </div>
 
 ### <h2>Descrição:</h2>
