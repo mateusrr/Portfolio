@@ -96,12 +96,12 @@ export function Languages() {
         <LanguagesDefinition
           ariaLabel="prisma"
           icon={Icons.SiPrisma}
-          href="https://www.prisma.io/"  
+          href="https://www.prisma.io/"
         />
         <LanguagesDefinition
           ariaLabel="prismic"
           icon={Icons.SiPrismic}
-          href="https://www.prismic.io/"  
+          href="https://www.prismic.io/"
         />
       </Box>
     </>
