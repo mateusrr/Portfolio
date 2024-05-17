@@ -38,13 +38,21 @@ export default function About() {
 
             <Text mt={4}>
               <Highlight
-                query={['compromisso', 'oportunidades']}
+                query={[
+                  'novas',
+                  'oportunidades',
+                  'cursos',
+                  'contribuire',
+                  'agregar valor',
+                ]}
                 styles={{ color: 'blue.600' }}
               >
-                Busco ingressar nas oportunidades que surgir no campo da
-                tecnologia, mantendo um compromisso de aprimorar as minhas
-                habilidades, onde poderei não apenas contribuir com meu
-                conhecimento, mas também aprender ativamente.
+                Estou aberto a novas oportunidades na área de TI, para isso
+                tenho feito cursos para obter capacitação mantendo o compromisso
+                de aprimorar as minhas habilidades, onde poderei não somente
+                contribuir com meu conhecimento, mas também aprender ativamente,
+                podendo assim agregar valor e buscando o crescimento pessoal e
+                profissional.
               </Highlight>
             </Text>
 

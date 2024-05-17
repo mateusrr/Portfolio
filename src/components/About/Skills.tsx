@@ -2,6 +2,7 @@ import { Box, SimpleGrid, Text } from '@chakra-ui/react'
 import { Languages } from './Languages'
 import React from 'react'
 import { ListItems } from './ListItems'
+import { ListCursos } from './ListCursos'
 
 // junção dos componentes Languages e ListItems
 interface TextSkillsProps {
@@ -31,7 +32,7 @@ export const Skills = () => {
     <SimpleGrid
       templateColumns={{ base: '', md: 'repeat(2, 1fr)' }}
       fontSize={{ base: 'sm', md: 'xl' }}
-      gap={{ base: '', md: '8' }}
+      gap={{ base: '', md: '2' }}
     >
       <Box>
         <TextSkills w={{ base: '80px', md: '110px' }}>Hard Skills</TextSkills>
@@ -41,6 +42,11 @@ export const Skills = () => {
       <Box>
         <TextSkills w={{ base: '70px', md: '100px' }}>Soft Skills</TextSkills>
         <ListItems />
+      </Box>
+
+      <Box>
+        <TextSkills w={{ base: '70px', md: '70px' }}>Cursos</TextSkills>
+        <ListCursos />
       </Box>
     </SimpleGrid>
   )
