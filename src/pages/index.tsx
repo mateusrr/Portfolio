@@ -1,7 +1,20 @@
 import React from 'react'
-import { Box, Flex, Image, Text } from '@chakra-ui/react'
+import { Box, Flex, Icon, Image, Text } from '@chakra-ui/react'
 import SocialMedia from '@/components/SocialMedia'
 import { EffectFade } from '@/components/EffectFade'
+import { VscCircleFilled } from 'react-icons/vsc'
+
+const IconCircleFilld = () => {
+  return (
+    <>
+      <Icon
+        as={VscCircleFilled}
+        fontSize={{ base: '5px', md: '10px' }}
+        mr={1}
+      />
+    </>
+  )
+}
 
 export default function Home() {
   return (
@@ -28,7 +41,11 @@ export default function Home() {
                 fontWeight="normal"
                 mr={5}
               >
-                Desenvolvedor Front-End
+                Engenheiro da Computação,
+                <br />
+                Desenvolvedor Front-End,
+                <br />
+                Aberto a novas oportunidades.
               </Text>
             </Flex>
             <SocialMedia />
