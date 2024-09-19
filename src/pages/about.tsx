@@ -26,33 +26,36 @@ export default function About() {
           >
             <Text>
               <Highlight
-                query={['Engenharia da Computação', 'especializado']}
+                query={[
+                  'Engenharia da Computação',
+                  'Desenvolvimento',
+                  'estou a procura',
+                ]}
                 styles={{ color: 'blue.600' }}
               >
-                Sou graduado em Engenharia da Computação, além disso tenho me
-                especializado em Desenvolvimento Front-end, explorando as
-                principais tecnologias dessa área e desenvolvendo projetos
-                práticos com os conhecimentos adquiridos até então.
+                Sou formado em Engenharia da Computação e já atuei na área de
+                Desenvolvimento, além de ter adquirido alguma experiência em
+                Suporte Técnico e, estou a procura de oportunidades na área de
+                TI.
               </Highlight>
             </Text>
 
             <Text mt={4}>
               <Highlight
                 query={[
-                  'novas',
-                  'oportunidades',
-                  'cursos',
-                  'contribuire',
-                  'agregar valor',
+                  'conhecimentos',
+                  'investindo',
+                  'adaptabilidade',
+                  'paixão',
+                  'novas competências',
                 ]}
                 styles={{ color: 'blue.600' }}
               >
-                Estou aberto a novas oportunidades na área de TI, para isso
-                tenho feito cursos para obter capacitação mantendo o compromisso
-                de aprimorar as minhas habilidades, onde poderei não somente
-                contribuir com meu conhecimento, mas também aprender ativamente,
-                podendo assim agregar valor e buscando o crescimento pessoal e
-                profissional.
+                Para expandir meus conhecimentos, venho investindo em cursos e
+                capacitações, reforçando meu compromisso com o aprendizado
+                contínuo e minha adaptabilidade. Minha paixão pela tecnologia me
+                motiva a aprimorar constantemente minhas habilidades e a
+                aprender novas competências.
               </Highlight>
             </Text>
 
@@ -65,6 +68,11 @@ export default function About() {
                 resultados esperados da organização, assim espero crescer
                 pessoalmente e profissionalmente.
               </Highlight>
+            </Text>
+
+            <Text mt={4}>
+              Áreas de interesse: Analista de TI, Desenvolvedor Front-end,
+              Suporte técnico.
             </Text>
 
             <Skills />

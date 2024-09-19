@@ -1,35 +1,16 @@
-import { Icon, ListItem, UnorderedList } from '@chakra-ui/react'
-import { VscCircleFilled } from 'react-icons/vsc'
+import { ListItem, UnorderedList } from '@chakra-ui/react'
 import React from 'react'
-
-// Softskills
-const IconCircleFilld = () => {
-  return (
-    <>
-      <Icon
-        as={VscCircleFilled}
-        fontSize={{ base: '5px', md: '10px' }}
-        mr={1}
-      />
-    </>
-  )
-}
 
 export const ListCursos = () => {
   return (
-    <UnorderedList>
-      <ListItem
-        listStyleType="none"
-        marginStart={-4}
-        textAlign="left"
-        fontSize={{ base: 'xs', md: 'md' }}
-      >
-        Trilha Ignite (Rocketseat) <IconCircleFilld />
-        Zabbix (Udemy) <IconCircleFilld />
-        Central de serviços com GLPI (Udemy) <IconCircleFilld />
-        Javascript (Udemy) <IconCircleFilld />
-        Bootcamp Linux (DIO)
-      </ListItem>
+    <UnorderedList textAlign="left" fontSize={{ base: 'xs', md: 'md' }}>
+      <ListItem>Trilha Ignite - React.js (Rocketseat)</ListItem>
+      <ListItem>Zabbix 6 (Udemy)</ListItem>
+      <ListItem> Central de serviços com GLPI (Udemy)</ListItem>
+      <ListItem> Javascript e Typescript (Udemy)</ListItem>
+      <ListItem> Bootcamp Linux (DIO)</ListItem>
+      <ListItem> Engenharia de Dados com Python (DIO)</ListItem>
+      <ListItem> Power BI (Prime Cursos)</ListItem>
     </UnorderedList>
   )
 }

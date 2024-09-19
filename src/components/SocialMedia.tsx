@@ -1,4 +1,5 @@
-import { Flex, IconButton } from '@chakra-ui/react'
+import { Button, Flex, IconButton } from '@chakra-ui/react'
+import Link from 'next/link'
 import React from 'react'
 import { BsGithub, BsLinkedin } from 'react-icons/bs'
 
@@ -35,7 +36,7 @@ const ButtonSocialMedia = ({ href, icon, ariaLabel }: ZoomIconProps) => {
 
 export default function ZoomIcon() {
   return (
-    <Flex direction="row" justify="left">
+    <Flex direction="row" justify="left" alignItems={'center'} gap={2}>
       <ButtonSocialMedia
         href="https://github.com/mateusrr"
         icon={BsGithub}
@@ -46,6 +47,25 @@ export default function ZoomIcon() {
         icon={BsLinkedin}
         ariaLabel="Linkedin"
       />
+      <Button
+        size={'sm'}
+        variant={'solid'}
+        bg="white"
+        color="gray.900"
+        fontWeight="bold"
+        transition="all 0.2s ease-out"
+        _hover={{
+          transform: 'scale(1.1)',
+          background: 'blue.500',
+        }}
+      >
+        <Link
+          href="https://drive.google.com/file/d/18wsQfgTa3pzXbdrPiB4zc4QTZlRMinM_/view?usp=sharing"
+          target="_blank"
+        >
+          CV
+        </Link>
+      </Button>
     </Flex>
   )
 }

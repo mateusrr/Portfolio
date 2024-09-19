@@ -1,36 +1,17 @@
-import { Icon, ListItem, UnorderedList } from '@chakra-ui/react'
-import { VscCircleFilled } from 'react-icons/vsc'
+import { ListItem, UnorderedList } from '@chakra-ui/react'
 import React from 'react'
-
-// Softskills
-const IconCircleFilld = () => {
-  return (
-    <>
-      <Icon
-        as={VscCircleFilled}
-        fontSize={{ base: '5px', md: '10px' }}
-        mr={1}
-      />
-    </>
-  )
-}
 
 export const ListItems = () => {
   return (
     <>
-      <UnorderedList>
-        <ListItem
-          listStyleType="none"
-          marginStart={-4}
-          textAlign="left"
-          fontSize={{ base: 'xs', md: 'md' }}
-        >
-          Trabalho em equipe <IconCircleFilld />
-          Organização <IconCircleFilld />
-          Proativo <IconCircleFilld />
-          Autogerenciamento <IconCircleFilld />
-          Design
-        </ListItem>
+      <UnorderedList textAlign="left" fontSize={{ base: 'xs', md: 'md' }}>
+        <ListItem>Trabalho em equipe</ListItem>
+        <ListItem>Organização</ListItem>
+        <ListItem>Proatividade</ListItem>
+        <ListItem>Gestão do tempo</ListItem>
+        <ListItem>Adaptabilidade</ListItem>
+        <ListItem>Resiliência</ListItem>
+        <ListItem>Design</ListItem>
       </UnorderedList>
     </>
   )
