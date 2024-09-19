@@ -22,7 +22,7 @@ export default function Home() {
               <span style={{ color: '#DD6B20', fontSize: '3rem' }}>.</span>
             </Text>
 
-            <Flex m={{ base: '', md: '5px' }} align="left">
+            {/* <Flex m={{ base: '', md: '5px' }} align="left">
               <Text
                 fontSize={{ base: 'sm', md: 'md' }}
                 fontWeight="normal"
@@ -34,7 +34,7 @@ export default function Home() {
                 <br />
                 Aberto a novas oportunidades.
               </Text>
-            </Flex>
+            </Flex> */}
             <SocialMedia />
           </Box>
           <Image
