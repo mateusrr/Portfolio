@@ -1,128 +1,122 @@
+'use client'
+
 import {
-  Box,
-  ResponsiveValue,
-  LinkProps,
-  Link,
   Flex,
+  Link,
   IconButton,
   useColorMode,
-  Icon,
   useDisclosure,
   useBreakpointValue,
+  Drawer,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  DrawerHeader,
+  DrawerBody,
+  VStack,
 } from '@chakra-ui/react'
-import { motion } from 'framer-motion'
 import { FiMenu, FiMoon, FiSun } from 'react-icons/fi'
+import { motion } from 'framer-motion'
+import { usePathname } from 'next/navigation'
 
-const Motion = motion(Box)
+const MotionLink = motion(Link)
 
-const linkProps: Omit<LinkProps, 'position'> & {
-  pos?: ResponsiveValue<String> | undefined
-} = {
-  textDecoration: 'none',
-  transition: 'all 0.3s',
-  pos: 'relative',
-  display: 'inline-block',
-  marginRight: '2',
-  fontWeight: 'normal',
-  _hover: {
-    _before: {
-      width: '100%',
-      height: '0.5px',
-      content: '""',
-      position: 'absolute',
-      bottom: 0,
-      left: 0,
-      backgroundColor: 'blue.600',
-      transition: 'all 0.3s',
-    },
-  },
-}
+const links = [
+  { href: '/', label: 'Início' },
+  { href: '#about', label: 'Sobre' },
+  { href: '#projects', label: 'Projetos' },
+]
 
 export function LinksHeader() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const { colorMode, toggleColorMode } = useColorMode()
-  const isMobile = useBreakpointValue({ base: '768px', md: '' })
+  const isMobile = useBreakpointValue({ base: true, md: false })
+  // const activeColor = useColorModeValue('blue.700', 'blue.700')
+  const path = usePathname()
 
-  const handleColorChange = () => {
-    toggleColorMode()
+  const linkProps = {
+    px: 3,
+    py: 1,
+    position: 'relative',
+    _hover: {
+      textDecoration: 'none',
+    },
+    _after: {
+      content: '""',
+      position: 'absolute',
+      width: '100%',
+      transform: 'scaleX(0)',
+      height: '2px',
+      bottom: '0',
+      left: '0',
+      // backgroundColor: activeColor,
+      transformOrigin: 'bottom right',
+      transition: 'transform 0.3s ease-out',
+    },
+    _hoverAfter: {
+      transform: 'scaleX(1)',
+      transformOrigin: 'bottom left',
+    },
   }
 
+  const renderLinks = () =>
+    links.map(({ href, label }) => (
+      <MotionLink
+        key={href}
+        href={href}
+        {...linkProps}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        // fontWeight={path === href ? 'bold' : 'normal'}
+        // color={path === href ? activeColor : undefined}
+      >
+        {label}
+      </MotionLink>
+    ))
+
   return (
-    <Flex as="header" justify="space-between" align="center">
+    <>
       {!isMobile && (
-        <>
-          <Motion whileHover={{ opacity: 0.5 }} whileTap={{ opacity: 0.8 }}>
-            <Link {...linkProps} href="/" onClick={onClose}>
-              Início
-            </Link>
-          </Motion>
-
-          <Motion whileHover={{ opacity: 0.5 }} whileTap={{ opacity: 0.8 }}>
-            <Link {...linkProps} href="/about" onClick={onClose}>
-              Sobre
-            </Link>
-          </Motion>
-
-          <Motion whileHover={{ opacity: 0.5 }} whileTap={{ opacity: 0.8 }}>
-            <Link {...linkProps} href="/projects" onClick={onClose}>
-              Projetos
-            </Link>
-          </Motion>
-
+        <Flex align="center" gap={4}>
+          {renderLinks()}
           <IconButton
-            fontSize={{ base: 'sm', md: 'md' }}
-            bg="transparent"
-            aria-label="Toggle color mode"
-            icon={
-              colorMode === 'light' ? <Icon as={FiMoon} /> : <Icon as={FiSun} />
-            }
-            onClick={handleColorChange}
+            aria-label="Alternar tema"
+            icon={colorMode === 'light' ? <FiMoon /> : <FiSun />}
+            onClick={toggleColorMode}
+            variant="ghost"
+            size="md"
           />
-        </>
+        </Flex>
       )}
 
       {isMobile && (
         <>
-          {isOpen && (
-            <Flex fontSize="10px" align="center" direction="row">
-              <Link {...linkProps} href="/" onClick={onClose}>
-                Início
-              </Link>
-
-              <Link {...linkProps} href="/about" onClick={onClose}>
-                Sobre
-              </Link>
-
-              <Link {...linkProps} href="/projects" onClick={onClose}>
-                Projetos
-              </Link>
-
-              <IconButton
-                minW="0"
-                fontSize={{ base: 'sm', md: 'md' }}
-                bg="transparent"
-                aria-label="Toggle color mode"
-                icon={
-                  colorMode === 'light' ? (
-                    <Icon as={FiMoon} />
-                  ) : (
-                    <Icon as={FiSun} />
-                  )
-                }
-                onClick={handleColorChange}
-              />
-            </Flex>
-          )}
           <IconButton
-            p="none"
-            fontSize={{ base: 'xs', md: 'md' }}
-            bg="transparent"
-            aria-label="Toggle menu"
-            icon={<Icon as={FiMenu} />}
-            onClick={isOpen ? onClose : onOpen}
+            aria-label="Abrir menu"
+            icon={<FiMenu />}
+            onClick={onOpen}
+            variant="ghost"
           />
+          <Drawer placement="right" onClose={onClose} isOpen={isOpen}>
+            <DrawerOverlay />
+            <DrawerContent bg={colorMode === 'light' ? 'white' : 'gray.900'}>
+              <DrawerCloseButton />
+              <DrawerHeader>Menu</DrawerHeader>
+              <DrawerBody>
+                <VStack spacing={4} align="start">
+                  {renderLinks()}
+                  <IconButton
+                    aria-label="Alternar tema"
+                    icon={colorMode === 'light' ? <FiMoon /> : <FiSun />}
+                    onClick={toggleColorMode}
+                    variant="ghost"
+                  />
+                </VStack>
+              </DrawerBody>
+            </DrawerContent>
+          </Drawer>
         </>
       )}
-    </Flex>
+    </>
   )
 }

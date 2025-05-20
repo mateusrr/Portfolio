@@ -13,13 +13,14 @@ const LanguagesDefinition = ({ href, icon: Icon, ariaLabel }: any) => {
       aria-label={ariaLabel}
       href={href}
       target="_blank"
-      bg="blue.500"
+      bg="blue.700"
       p={{ base: 'auto', md: '3' }}
       m={1}
       h="45px"
       borderRadius={8}
       _hover={{
-        bg: 'blue.600',
+        bg: 'gray.200',
+        color: 'gray.900',
       }}
     >
       <Icon />

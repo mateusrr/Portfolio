@@ -1,29 +1,51 @@
-import { Button } from '@chakra-ui/react'
+import { Button, Link as ChakraLink } from '@chakra-ui/react'
+import { ReactNode } from 'react'
 
-// Component usado para os buttons de Deploy e Repository
 interface ButtonAcess {
   href?: string
   children: string
+  icon?: ReactNode
+  bg?: string
+  color?: string
+  hoverBg?: string
+  hoverColor?: string
+  iconPosition?: 'left' | 'right' // <- nova prop
 }
 
-export const ButtonsAcess = ({ href, children }: ButtonAcess) => {
+export const ButtonsAcess = ({
+  href,
+  children,
+  icon,
+  bg,
+  color,
+  hoverBg,
+  hoverColor,
+  iconPosition = 'left', // <- padrão é 'right'
+}: ButtonAcess) => {
   return (
-    <>
-      <Button
-        _hover={{ bg: 'blue.600', borderRadius: '10px' }}
-        mb={{ base: 2, md: 20 }}
-        bg="blue.500"
-        color="gray.100"
-        fontWeight="medium"
-        as="a"
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        size={{ base: 'xs', md: 'sm' }}
-        p="3px"
-      >
-        {children}
-      </Button>
-    </>
+    <Button
+      as={ChakraLink}
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      bg={bg}
+      color={color}
+      _hover={{
+        bg: hoverBg,
+        color: hoverColor,
+        borderRadius: '10px',
+        textDecoration: 'none',
+        transform: 'scale(1.03)',
+      }}
+      transition="transform 0.3s ease"
+      mb={{ base: 2, md: 20 }}
+      fontWeight="medium"
+      size={{ base: 'sm', md: 'md' }}
+      p="3px"
+      {...(icon && iconPosition === 'right' ? { rightIcon: icon } : {})}
+      {...(icon && iconPosition === 'left' ? { leftIcon: icon } : {})}
+    >
+      {children}
+    </Button>
   )
 }
