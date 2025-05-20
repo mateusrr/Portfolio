@@ -41,15 +41,20 @@ export default function About() {
 
           <Grid justifyContent="center">
             <Box maxW="3xl" mx="auto" textAlign="left">
-              <Stack spacing={6} fontSize={fontSize} color={textColor} lineHeight="1.8">
+              <Stack
+                spacing={6}
+                fontSize={fontSize}
+                color={textColor}
+                lineHeight="1.8"
+              >
                 <Text>
                   <Highlight
                     query={['Engenharia da Computação', 'soluções digitais']}
                     styles={{ color: highlightColor, fontWeight: 'semibold' }}
                   >
-                    Formado em Engenharia da Computação, utilizo minha base técnica
-                    e criativa para entregar soluções digitais que se conectam com
-                    pessoas e objetivos reais.
+                    Formado em Engenharia da Computação, utilizo minha base
+                    técnica e criativa para entregar soluções digitais que se
+                    conectam com pessoas e objetivos reais.
                   </Highlight>
                 </Text>
 
@@ -58,10 +63,10 @@ export default function About() {
                     query={['experiência prática', 'visão estratégica']}
                     styles={{ color: highlightColor, fontWeight: 'semibold' }}
                   >
-                    Através de experiência prática e constante atualização, ofereço
-                    não apenas desenvolvimento, mas visão estratégica para
-                    transformar ideias em produtos modernos, funcionais e com forte
-                    presença digital.
+                    Através de experiência prática e constante atualização,
+                    ofereço não apenas desenvolvimento, mas visão estratégica
+                    para transformar ideias em produtos modernos, funcionais e
+                    com forte presença digital.
                   </Highlight>
                 </Text>
 
@@ -70,8 +75,8 @@ export default function About() {
                     query={['compromisso', 'detalhe', 'soluções sob medida']}
                     styles={{ color: highlightColor, fontWeight: 'semibold' }}
                   >
-                    Com atenção ao detalhe, comunicação clara e compromisso com o
-                    resultado, crio soluções sob medida para cada cliente —
+                    Com atenção ao detalhe, comunicação clara e compromisso com
+                    o resultado, crio soluções sob medida para cada cliente —
                     alinhando identidade, performance e propósito.
                   </Highlight>
                 </Text>

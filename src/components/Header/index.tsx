@@ -1,6 +1,6 @@
 'use client'
 
-import { Box, Flex, useColorMode, useColorModeValue } from '@chakra-ui/react'
+import { Box, Flex, useColorModeValue } from '@chakra-ui/react'
 import Link from 'next/link'
 import { LinksHeader } from './LinksHeader'
 import { motion } from 'framer-motion'
@@ -8,7 +8,7 @@ import { motion } from 'framer-motion'
 const MotionBox = motion(Box)
 
 export function Header() {
-  const { colorMode } = useColorMode()
+  // const { colorMode } = useColorMode()
 
   const bgBlur = useColorModeValue(
     'rgba(255, 255, 255, 0.7)',

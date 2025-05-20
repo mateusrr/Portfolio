@@ -17,7 +17,7 @@ import {
 } from '@chakra-ui/react'
 import { FiMenu, FiMoon, FiSun } from 'react-icons/fi'
 import { motion } from 'framer-motion'
-import { usePathname } from 'next/navigation'
+// import { usePathname } from 'next/navigation'
 
 const MotionLink = motion(Link)
 
@@ -32,7 +32,7 @@ export function LinksHeader() {
   const { colorMode, toggleColorMode } = useColorMode()
   const isMobile = useBreakpointValue({ base: true, md: false })
   // const activeColor = useColorModeValue('blue.700', 'blue.700')
-  const path = usePathname()
+  // const path = usePathname()
 
   const linkProps = {
     px: 3,
