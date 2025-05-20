@@ -1,15 +1,15 @@
 import { Button, Link as ChakraLink } from '@chakra-ui/react'
-import { ReactNode } from 'react'
+import { ReactElement } from 'react'
 
 interface ButtonAcess {
   href?: string
   children: string
-  icon?: ReactNode
+  icon?: ReactElement
   bg?: string
   color?: string
   hoverBg?: string
   hoverColor?: string
-  iconPosition?: 'left' | 'right' // <- nova prop
+  iconPosition?: 'left' | 'right'
 }
 
 export const ButtonsAcess = ({
@@ -20,7 +20,7 @@ export const ButtonsAcess = ({
   color,
   hoverBg,
   hoverColor,
-  iconPosition = 'left', // <- padrão é 'right'
+  iconPosition = 'left',
 }: ButtonAcess) => {
   return (
     <Button
