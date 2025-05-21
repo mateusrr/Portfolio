@@ -1,7 +1,5 @@
 import { ButtonsAcess } from '@/components/Projects/ButtonsAcess'
 import { Flex, Heading, Text, Box, useColorModeValue } from '@chakra-ui/react'
-import { mode } from '@chakra-ui/theme-tools'
-// import { FaWhatsapp } from 'react-icons/fa'
 import { PiCursorClickThin } from 'react-icons/pi'
 
 export default function Footer() {
@@ -18,9 +16,9 @@ export default function Footer() {
     {
       label: 'Envie uma mensagem',
       href: '/contato',
-      bg: mode('gray.200', 'blue.900'),
-      color: mode('gray.900', 'gray.200'),
-      hover: mode('gray.300', 'gray.800'),
+      bg: useColorModeValue('gray.200', 'blue.900'),
+      color: useColorModeValue('gray.900', 'gray.200'),
+      hover: useColorModeValue('gray.300', 'gray.800'),
       icon: <PiCursorClickThin />,
       external: false,
     },
