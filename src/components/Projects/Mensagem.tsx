@@ -1,5 +1,5 @@
 import { ButtonsAcess } from '@/components/Projects/ButtonsAcess'
-import { mode } from '@chakra-ui/theme-tools'
+import { useColorModeValue } from '@chakra-ui/react'
 import { PiCursorClickThin } from 'react-icons/pi'
 
 export default function Mensagem() {
@@ -7,9 +7,9 @@ export default function Mensagem() {
     {
       label: 'Envie uma mensagem',
       href: '/contato',
-      bg: mode('gray.200', 'gray.900'),
-      color: mode('gray.900', 'gray.200'),
-      hover: mode('gray.300', 'gray.800'),
+      bg: useColorModeValue('gray.200', 'gray.900'),
+      color: useColorModeValue('gray.900', 'gray.200'),
+      hover: useColorModeValue('gray.300', 'gray.800'),
       icon: <PiCursorClickThin />,
       external: false,
     },
