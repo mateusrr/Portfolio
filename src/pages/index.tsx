@@ -39,7 +39,7 @@ export default function Home({ projects }: ProjectProps) {
   const textColor = useColorModeValue('gray.900', 'gray.200')
 
   return (
-    <Box position="relative" overflow="hidden" px={{ base: 4, md: 4 }}>
+    <Box position="relative" overflow="hidden" px={{ base: 4, md: 0 }}>
       {/* <ScrollReveal>
         <Flex
           as="section"

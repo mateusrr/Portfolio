@@ -25,10 +25,10 @@ export default function About() {
         bg="gray.900"
         as="section"
         id="about"
-        py={{ base: 20, md: 28 }} // Espaçamento vertical padronizado
+        py={{ base: 20, md: 28 }}
         px={4}
       >
-        <Container maxW="7xl">
+        <Container w="full">
           <Heading
             as="h2"
             fontSize={{ base: '2xl', md: '4xl' }}
