@@ -16,15 +16,15 @@ export default function Footer() {
     {
       label: 'Envie uma mensagem',
       href: '/contato',
-      bg: useColorModeValue('gray.200', 'blue.900'),
-      color: useColorModeValue('gray.900', 'gray.200'),
-      hover: useColorModeValue('gray.300', 'gray.800'),
+      bg: useColorModeValue('gray.200', 'gray.100'),
+      color: useColorModeValue('gray.900', 'gray.900'),
+      hover: useColorModeValue('gray.300', 'gray.200'),
       icon: <PiCursorClickThin />,
       external: false,
     },
   ]
   const textColor = useColorModeValue('gray.900', 'gray.200')
-  const bgColorFooter = useColorModeValue('gray.100', 'blue.700')
+  const bgColorFooter = useColorModeValue('gray.100', 'gray.900')
   const ColorFooter = useColorModeValue('gray.900', 'gray.100')
   return (
     <Box

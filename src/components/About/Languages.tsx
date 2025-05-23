@@ -8,19 +8,19 @@ const LanguagesDefinition = ({ href, icon: Icon, ariaLabel }: any) => {
       fontSize={{ base: '20px', md: '30px' }}
       variant="outline"
       border="none"
-      color="gray.100"
+      color="gray.900"
       as={ChakraLink}
       aria-label={ariaLabel}
       href={href}
       target="_blank"
-      bg="blue.700"
+      bg="gray.100"
       p={{ base: 'auto', md: '3' }}
       m={1}
       h="45px"
       borderRadius={8}
       _hover={{
-        bg: 'gray.200',
-        color: 'gray.900',
+        bg: 'gray.800',
+        color: 'gray.100',
       }}
     >
       <Icon />

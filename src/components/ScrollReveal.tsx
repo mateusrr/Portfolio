@@ -1,6 +1,6 @@
 'use client'
 
-import { chakra } from '@chakra-ui/react'
+// import { chakra } from '@chakra-ui/react'
 import { motion, useAnimation, useInView } from 'framer-motion'
 import React, { useEffect, useRef, useState } from 'react'
 
@@ -9,7 +9,7 @@ interface ScrollRevealProps {
 }
 
 export default function ScrollReveal({ children }: ScrollRevealProps) {
-  const MotionBox = chakra(motion.div)
+  // const MotionBox = chakra(motion.div)
   const ref = useRef(null)
   const controls = useAnimation()
   const isInView = useInView(ref, { once: false })
@@ -53,14 +53,14 @@ export default function ScrollReveal({ children }: ScrollRevealProps) {
   }
 
   return (
-    <MotionBox
+    <motion.div
       ref={ref}
       initial="hidden"
       animate={controls}
       variants={variants}
-      px={{ base: 4, md: 0 }}
+      // px={{ base: 4, md: 0 }}
     >
       {children}
-    </MotionBox>
+    </motion.div>
   )
 }

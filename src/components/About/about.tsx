@@ -22,6 +22,7 @@ export default function About() {
   return (
     <ScrollReveal>
       <Box
+        bg="gray.900"
         as="section"
         id="about"
         py={{ base: 20, md: 28 }} // Espaçamento vertical padronizado

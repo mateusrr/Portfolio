@@ -1,15 +1,13 @@
 'use client'
 
 import { Box, Flex, useColorModeValue } from '@chakra-ui/react'
-import Link from 'next/link'
 import { LinksHeader } from './LinksHeader'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const MotionBox = motion(Box)
 
 export function Header() {
-  // const { colorMode } = useColorMode()
-
   const bgBlur = useColorModeValue(
     'rgba(255, 255, 255, 0.7)',
     'rgba(18, 18, 18, 0.6)',
@@ -27,26 +25,33 @@ export function Header() {
       boxShadow="sm"
       transition="all 0.3s ease-in-out"
       align="center"
-      justify="space-between"
+      justify="center"
       h="70px"
-      w="full"
       px={6}
-      mx="auto"
     >
-      <MotionBox
-        fontSize={{ base: 'lg', md: 'md' }}
-        fontWeight="800"
-        fontFamily="heading"
-        color={textColor}
-        _hover={{ opacity: 0.8 }}
-        display="flex"
-        alignItems="center"
-        gap={2}
+      <Flex
+        align="center"
+        justify="space-between"
+        w="full"
+        maxW="1000px"
+        mx="auto"
+        px={{ base: 4, md: 8 }}
       >
-        <Link href="/">Mateus Rocha</Link>
-      </MotionBox>
+        <MotionBox
+          fontSize={{ base: 'lg', md: 'md' }}
+          fontWeight="bold"
+          fontFamily="heading"
+          color={textColor}
+          _hover={{ opacity: 0.8 }}
+          display="flex"
+          alignItems="center"
+          // gap={2}
+        >
+          <Image src="/logo.png" height={100} width={100} alt="Logo" />
+        </MotionBox>
 
-      <LinksHeader />
+        <LinksHeader />
+      </Flex>
     </Flex>
   )
 }
