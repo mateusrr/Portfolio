@@ -4,15 +4,6 @@ import { PiCursorClickThin } from 'react-icons/pi'
 
 export default function Footer() {
   const contacts = [
-    // {
-    //   label: 'Fale comigo',
-    //   href: 'https://wa.me/5599999999999',
-    //   bg: mode('green.400', 'green.400'),
-    //   color: mode('green.900', 'green.900'),
-    //   hover: mode('green.500', 'green.500'),
-    //   icon: <FaWhatsapp />,
-    //   external: true,
-    // },
     {
       label: 'Envie uma mensagem',
       href: '/contato',
@@ -23,7 +14,6 @@ export default function Footer() {
       external: false,
     },
   ]
-  const textColor = useColorModeValue('gray.900', 'gray.200')
   const bgColorFooter = useColorModeValue('gray.100', 'gray.900')
   const ColorFooter = useColorModeValue('gray.900', 'gray.100')
   return (
@@ -38,7 +28,7 @@ export default function Footer() {
         as="h2"
         fontSize={{ base: '2xl', md: '5xl' }}
         textAlign="center"
-        mb={8}
+        mb={4}
         fontWeight="700"
         letterSpacing="-0.5px"
         color={ColorFooter}
@@ -46,7 +36,7 @@ export default function Footer() {
         Entre em Contato
       </Heading>
 
-      <Flex justify="center" flexWrap="wrap" gap={3} mb={-10}>
+      <Flex justify="center">
         {contacts.map((contact, idx) => (
           <ButtonsAcess
             key={idx}
@@ -61,7 +51,7 @@ export default function Footer() {
         ))}
       </Flex>
 
-      <Text textAlign="center" fontSize="sm" color={textColor} mt={2}>
+      <Text textAlign="center" fontSize="sm" color="gray.800">
         © {new Date().getFullYear()} MRR. Todos os direitos reservados.
       </Text>
     </Box>

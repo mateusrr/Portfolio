@@ -17,25 +17,25 @@ import {
 } from '@chakra-ui/react'
 import { FiMenu, FiMoon, FiSun } from 'react-icons/fi'
 import { motion } from 'framer-motion'
-// import { usePathname } from 'next/navigation'
+import { usePathname } from 'next/navigation'
+import React from 'react'
 
 const MotionLink = motion(Link)
 
 const links = [
-  { href: '/', label: 'Início' },
-  { href: '#about', label: 'Sobre' },
-  { href: '#projects', label: 'Projetos' },
+  { href: '/#inicio', label: 'Início' },
+  { href: '/#about', label: 'Sobre' },
+  { href: '/#projects', label: 'Projetos' },
+  { href: '/#contato', label: 'Contato' },
 ]
 
 export function LinksHeader() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const { colorMode, toggleColorMode } = useColorMode()
   const isMobile = useBreakpointValue({ base: true, md: false })
-  // const activeColor = useColorModeValue('blue.700', 'blue.700')
-  // const path = usePathname()
+  const path = usePathname()
 
   const linkProps = {
-    px: 3,
     py: 1,
     position: 'relative',
     _hover: {
@@ -49,8 +49,6 @@ export function LinksHeader() {
       height: '2px',
       bottom: '0',
       left: '0',
-      // backgroundColor: activeColor,
-      transformOrigin: 'bottom right',
       transition: 'transform 0.3s ease-out',
     },
     _hoverAfter: {
@@ -59,16 +57,37 @@ export function LinksHeader() {
     },
   }
 
+  const handleClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
+    const id = href.split('#')[1]
+
+    if (path !== '/') {
+      // Se está fora da home, navega normalmente
+      return
+    }
+
+    e.preventDefault()
+
+    const element = document.getElementById(id)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+
+    // Fecha o Drawer se estiver no mobile
+    if (isMobile) onClose()
+  }
+
   const renderLinks = () =>
     links.map(({ href, label }) => (
       <MotionLink
         key={href}
         href={href}
+        onClick={(e) => handleClick(e, href)}
         {...linkProps}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        // fontWeight={path === href ? 'bold' : 'normal'}
-        // color={path === href ? activeColor : undefined}
       >
         {label}
       </MotionLink>

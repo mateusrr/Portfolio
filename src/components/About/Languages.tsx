@@ -1,19 +1,21 @@
-import { IconButton, Link as ChakraLink, Box } from '@chakra-ui/react'
+import { IconButton, Link as ChakraLink, Box, useColorModeValue } from '@chakra-ui/react'
 import * as Icons from 'react-icons/si'
 
 // definições para o button das linguagens.
 const LanguagesDefinition = ({ href, icon: Icon, ariaLabel }: any) => {
+  const colorBg = useColorModeValue('gray.900', 'gray.100')
+  const colorText = useColorModeValue('gray.100', 'gray.900')
   return (
     <IconButton
       fontSize={{ base: '20px', md: '30px' }}
       variant="outline"
       border="none"
-      color="gray.900"
+      color={colorText}
       as={ChakraLink}
       aria-label={ariaLabel}
       href={href}
       target="_blank"
-      bg="gray.100"
+      bg={colorBg}
       p={{ base: 'auto', md: '3' }}
       m={1}
       h="45px"
@@ -33,7 +35,7 @@ export function Languages() {
   return (
     <>
       <Box>
-        <LanguagesDefinition
+        {/* <LanguagesDefinition
           ariaLabel="html5"
           icon={Icons.SiHtml5}
           href="https://html.spec.whatwg.org/"
@@ -42,7 +44,7 @@ export function Languages() {
           ariaLabel="css3"
           icon={Icons.SiCss3}
           href="https://www.w3.org/TR/css-2018/"
-        />
+        /> */}
         <LanguagesDefinition
           ariaLabel="js"
           icon={Icons.SiJavascript}
@@ -51,6 +53,11 @@ export function Languages() {
         <LanguagesDefinition
           ariaLabel="ts"
           icon={Icons.SiTypescript}
+          href="https://www.typescriptlang.org/"
+        />
+        <LanguagesDefinition
+          ariaLabel="python"
+          icon={Icons.SiPython}
           href="https://www.typescriptlang.org/"
         />
         <LanguagesDefinition
@@ -63,10 +70,14 @@ export function Languages() {
           icon={Icons.SiChakraui}
           href="https://chakra-ui.com/"
         />
-
         <LanguagesDefinition
           ariaLabel="nextjs"
           icon={Icons.SiNextdotjs}
+          href="https://nextjs.org/"
+        />
+        <LanguagesDefinition
+          ariaLabel="nestjs"
+          icon={Icons.SiNestjs}
           href="https://nextjs.org/"
         />
         <LanguagesDefinition
@@ -95,6 +106,11 @@ export function Languages() {
           href="https://styled-components.com/"
         />
         <LanguagesDefinition
+          ariaLabel="mongodb"
+          icon={Icons.SiMongodb}
+          href="https://styled-components.com/"
+        />
+        <LanguagesDefinition
           ariaLabel="prisma"
           icon={Icons.SiPrisma}
           href="https://www.prisma.io/"
@@ -102,6 +118,11 @@ export function Languages() {
         <LanguagesDefinition
           ariaLabel="prismic"
           icon={Icons.SiPrismic}
+          href="https://www.prismic.io/"
+        />
+        <LanguagesDefinition
+          ariaLabel="firebase"
+          icon={Icons.SiFirebase}
           href="https://www.prismic.io/"
         />
       </Box>

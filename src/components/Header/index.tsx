@@ -33,7 +33,7 @@ export function Header() {
         align="center"
         justify="space-between"
         w="full"
-        maxW="1000px"
+        maxW="700px"
         mx="auto"
         px={{ base: 4, md: 8 }}
       >

@@ -16,9 +16,9 @@ import { getPrismicClient } from '@/services/prismic'
 import { GetStaticProps } from 'next'
 import React from 'react'
 import { ButtonsAcess } from '@/components/Projects/ButtonsAcess'
-import Mensagem from '@/components/Projects/Mensagem'
 import About from '@/components/About/about'
 import { Typewriter } from 'react-simple-typewriter'
+import ContactPage from './contato'
 
 type Project = {
   uid: number
@@ -37,9 +37,10 @@ interface ProjectProps {
 export default function Home({ projects }: ProjectProps) {
   const projectsAll = projects.slice(0, 2)
   const textColor = useColorModeValue('gray.900', 'gray.200')
+  const colorText = useColorModeValue('gray.300', 'gray.900')
 
   return (
-    <Box position="relative" overflow="hidden" px={{ base: 4, md: 0 }}>
+    <Box position="relative" overflow="hidden">
       {/* <ScrollReveal>
         <Flex
           as="section"
@@ -98,6 +99,7 @@ export default function Home({ projects }: ProjectProps) {
       </ScrollReveal> */}
       <ScrollReveal>
         <Flex
+          id="inicio"
           as="section"
           direction={{ base: 'column', md: 'row' }}
           align="center"
@@ -122,7 +124,7 @@ export default function Home({ projects }: ProjectProps) {
             >
               Olá! Eu sou, Mateus!
               <br />
-              <Text as="span" color="gray.900">
+              <Text as="span" color={colorText}>
                 <Typewriter
                   words={['Developer.', '& Creative designer.']}
                   loop={0}
@@ -138,7 +140,7 @@ export default function Home({ projects }: ProjectProps) {
             <Text
               fontSize={{ base: 'md', md: 'xl' }}
               color={textColor}
-              maxW="480px"
+              maxW="460px"
               mt={4}
             >
               Crio soluções digitais modernas, responsivas e focadas na
@@ -148,15 +150,29 @@ export default function Home({ projects }: ProjectProps) {
             <Flex direction={{ base: 'column', sm: 'row' }} gap={4} mt={6}>
               <ButtonsAcess
                 bg="gray.100"
-                color={useColorModeValue('gray.100', 'gray.900')}
+                color="gray.900"
                 hoverBg="gray.900"
                 hoverColor="white"
+                border="1px solid"
+                borderColor="gray.900"
                 icon={<PiCursorClickThin />}
                 href="/projects"
               >
                 Ver projetos
               </ButtonsAcess>
-              <Mensagem />
+
+              <ButtonsAcess
+                bg="gray.100"
+                color="gray.900"
+                hoverBg="gray.900"
+                border="1px solid"
+                borderColor="gray.900"
+                hoverColor="white"
+                icon={<PiCursorClickThin />}
+                href="#contato"
+              >
+                Contato
+              </ButtonsAcess>
             </Flex>
           </Flex>
         </Flex>
@@ -166,7 +182,7 @@ export default function Home({ projects }: ProjectProps) {
 
       {/* Projetos Recentes */}
       <ScrollReveal>
-        <Box py={{ base: 20, md: 28 }}>
+        <Box py={{ base: 20, md: 28 }} id="projects">
           <Heading
             as="h2"
             fontSize={{ base: '2xl', md: '4xl' }}
@@ -178,7 +194,6 @@ export default function Home({ projects }: ProjectProps) {
           </Heading>
 
           <VStack
-            id="projects"
             spacing={24}
             align="stretch"
             px={{ base: 2, md: 0 }}
@@ -232,6 +247,8 @@ export default function Home({ projects }: ProjectProps) {
                       color="gray.900"
                       hoverBg="gray.900"
                       hoverColor="gray.100"
+                      border="1px solid"
+                      borderColor="gray.900"
                       icon={<PiCursorClickThin />}
                     >
                       Ver projeto
@@ -277,6 +294,8 @@ export default function Home({ projects }: ProjectProps) {
                   color="gray.900"
                   hoverBg="gray.900"
                   hoverColor="gray.100"
+                  border="1px solid"
+                  borderColor="gray.900"
                   icon={<PiCursorClickThin />}
                 >
                   Veja mais projetos
@@ -286,6 +305,8 @@ export default function Home({ projects }: ProjectProps) {
           </VStack>
         </Box>
       </ScrollReveal>
+
+      <ContactPage />
     </Box>
   )
 }

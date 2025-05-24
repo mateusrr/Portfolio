@@ -18,17 +18,17 @@ export default function About() {
   const fontSize = useBreakpointValue({ base: '0.95rem', md: '1.1rem' })
   const textColor = useColorModeValue('gray.700', 'gray.300')
   const highlightColor = useColorModeValue('gray.900', 'gray.100')
-
+  const bgColor = useColorModeValue('gray.100', 'gray.900')
   return (
     <ScrollReveal>
       <Box
-        bg="gray.900"
+        bg={bgColor}
         as="section"
         id="about"
         py={{ base: 20, md: 28 }}
         px={4}
       >
-        <Container w="full">
+        <Container maxW="4xl">
           <Heading
             as="h2"
             fontSize={{ base: '2xl', md: '4xl' }}
@@ -41,7 +41,7 @@ export default function About() {
           </Heading>
 
           <Grid justifyContent="center">
-            <Box maxW="3xl" mx="auto" textAlign="left">
+            <Box textAlign="left">
               <Stack
                 spacing={6}
                 fontSize={fontSize}
@@ -50,12 +50,17 @@ export default function About() {
               >
                 <Text>
                   <Highlight
-                    query={['Engenharia da Computação', 'soluções digitais']}
+                    query={[
+                      'Engenharia da Computação',
+                      'Desenvolvimento',
+                      'soluções digitais',
+                    ]}
                     styles={{ color: highlightColor, fontWeight: 'semibold' }}
                   >
-                    Formado em Engenharia da Computação, utilizo minha base
-                    técnica e criativa para entregar soluções digitais que se
-                    conectam com pessoas e objetivos reais.
+                    Formado em Engenharia da Computação e com foco em
+                    Desenvolvimento, utilizo minha base técnica e criativa para
+                    entregar soluções digitais que se conectam com pessoas e
+                    objetivos reais.
                   </Highlight>
                 </Text>
 

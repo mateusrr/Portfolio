@@ -18,12 +18,10 @@ import React, { useState } from 'react'
 
 export default function ContactPage() {
   const toast = useToast()
-  const cardBg = useColorModeValue('white', 'gray.900')
-  const text = useColorModeValue('gray.800', 'gray.100')
-  const borderColor = useColorModeValue('gray.200', 'gray.700')
-  const btnBg = useColorModeValue('gray.900', 'gray.100')
-  const btnColor = useColorModeValue('gray.100', 'gray.900')
-  const btnHover = useColorModeValue('gray.800', 'gray.200')
+
+  const textColor = useColorModeValue('gray.800', 'gray.100')
+  const subtitleColor = useColorModeValue('gray.600', 'gray.400')
+  const colorBg = useColorModeValue('gray.100', 'gray.900')
 
   const [isLoading, setIsLoading] = useState(false)
   const [formData, setFormData] = useState({
@@ -59,37 +57,37 @@ export default function ContactPage() {
   }
 
   return (
-    <Box minH="100vh" py={{ base: 12, md: 20 }}>
+    <Box minH="100vh" py={{ base: 12, md: 20 }} bg={colorBg} id="contato">
       <Container maxW="2xl">
         <VStack spacing={10} align="stretch">
           <Box textAlign="center">
             <Heading
               as="h1"
-              fontSize={{ base: '3xl', md: '4xl' }}
+              fontSize={{ base: '2xl', md: '4xl' }}
               fontWeight="bold"
-              color={text}
+              color={textColor}
               mb={2}
+              lineHeight="shorter"
             >
-              Envie uma mensagem
+              Vamos desenvolver um projeto?
             </Heading>
-            <Text fontSize="md" color="gray.500">
+            <Text fontSize="md" color={subtitleColor}>
               Preencha o formulário abaixo e em breve irei retornar.
             </Text>
           </Box>
 
           <Box
             as="form"
-            bg={cardBg}
-            color={text}
+            bg="gray.100"
+            color="gray.900"
             p={{ base: 8, md: 10 }}
-            borderRadius="xl"
-            boxShadow="lg"
+            borderRadius="2xl"
+            boxShadow="xl"
             border="1px solid"
-            borderColor={borderColor}
+            borderColor="gray.900"
             onSubmit={handleSubmit}
-            transition="all 0.3s ease"
           >
-            <VStack spacing={6}>
+            <VStack spacing={5}>
               <FormControl isRequired>
                 <FormLabel>Nome</FormLabel>
                 <Input
@@ -97,7 +95,10 @@ export default function ContactPage() {
                   placeholder="Seu nome"
                   value={formData.name}
                   onChange={handleChange}
-                  focusBorderColor="gray.100"
+                  borderColor="gray.900"
+                  _placeholder={{ color: 'gray.800' }}
+                  _hover={{ borderColor: 'gray.900' }}
+                  _focus={{ borderColor: 'gray.500', boxShadow: 'md' }}
                 />
               </FormControl>
 
@@ -105,11 +106,14 @@ export default function ContactPage() {
                 <FormLabel>Telefone</FormLabel>
                 <Input
                   name="telefone"
-                  type="telefone"
                   placeholder="(00) 00000-0000"
                   value={formData.telefone}
                   onChange={handleChange}
-                  focusBorderColor="gray.100"
+                  // bg="gray.100"
+                  borderColor="gray.900"
+                  _placeholder={{ color: 'gray.800' }}
+                  _hover={{ borderColor: 'gray.900' }}
+                  _focus={{ borderColor: 'gray.500', boxShadow: 'md' }}
                 />
               </FormControl>
 
@@ -121,7 +125,10 @@ export default function ContactPage() {
                   placeholder="seu@email.com"
                   value={formData.email}
                   onChange={handleChange}
-                  focusBorderColor="gray.100"
+                  borderColor="gray.900"
+                  _placeholder={{ color: 'gray.800' }}
+                  _hover={{ borderColor: 'gray.900' }}
+                  _focus={{ borderColor: 'gray.500', boxShadow: 'md' }}
                 />
               </FormControl>
 
@@ -133,20 +140,24 @@ export default function ContactPage() {
                   rows={5}
                   value={formData.message}
                   onChange={handleChange}
-                  focusBorderColor="gray.100"
+                  borderColor="gray.900"
+                  _placeholder={{ color: 'gray.800' }}
+                  _hover={{ borderColor: 'gray.900' }}
+                  _focus={{ borderColor: 'gray.500', boxShadow: 'md' }}
                 />
               </FormControl>
 
               <Button
                 type="submit"
-                width="full"
+                w="full"
                 isLoading={isLoading}
                 loadingText="Enviando..."
-                bg={btnBg}
-                color={btnColor}
-                _hover={{ bg: btnHover }}
+                bg="gray.900"
+                color="white"
+                _hover={{ bg: 'gray.800' }}
                 size="md"
                 borderRadius="md"
+                fontWeight="medium"
               >
                 Enviar mensagem
               </Button>

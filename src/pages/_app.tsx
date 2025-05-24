@@ -4,7 +4,6 @@ import { AppProps } from 'next/app'
 import theme from '../styles/theme'
 import { Analytics } from '@vercel/analytics/react'
 import { Header } from '@/components/Header'
-import Footer from './footer'
 
 export default function Portfolio({ Component, pageProps }: AppProps) {
   return (
@@ -12,7 +11,6 @@ export default function Portfolio({ Component, pageProps }: AppProps) {
       <Header />
       <Component {...pageProps} />
       <Analytics />
-      <Footer />
     </ChakraProvider>
   )
 }

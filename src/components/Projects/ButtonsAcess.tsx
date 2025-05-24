@@ -7,6 +7,8 @@ interface ButtonAcess {
   icon?: ReactElement
   bg?: string
   color?: string
+  border?: string
+  borderColor?: string
   hoverBg?: string
   hoverColor?: string
   iconPosition?: 'left' | 'right'
@@ -18,6 +20,8 @@ export const ButtonsAcess = ({
   icon,
   bg,
   color,
+  border,
+  borderColor,
   hoverBg,
   hoverColor,
   iconPosition = 'left',
@@ -30,6 +34,8 @@ export const ButtonsAcess = ({
       rel="noopener noreferrer"
       bg={bg}
       color={color}
+      border={border}
+      borderColor={borderColor}
       _hover={{
         bg: hoverBg,
         color: hoverColor,
