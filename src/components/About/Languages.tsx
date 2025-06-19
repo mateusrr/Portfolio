@@ -1,4 +1,9 @@
-import { IconButton, Link as ChakraLink, Box, useColorModeValue } from '@chakra-ui/react'
+import {
+  IconButton,
+  Link as ChakraLink,
+  Box,
+  useColorModeValue,
+} from '@chakra-ui/react'
 import * as Icons from 'react-icons/si'
 
 // definições para o button das linguagens.
@@ -35,16 +40,6 @@ export function Languages() {
   return (
     <>
       <Box>
-        {/* <LanguagesDefinition
-          ariaLabel="html5"
-          icon={Icons.SiHtml5}
-          href="https://html.spec.whatwg.org/"
-        />
-        <LanguagesDefinition
-          ariaLabel="css3"
-          icon={Icons.SiCss3}
-          href="https://www.w3.org/TR/css-2018/"
-        /> */}
         <LanguagesDefinition
           ariaLabel="js"
           icon={Icons.SiJavascript}
@@ -124,6 +119,11 @@ export function Languages() {
           ariaLabel="firebase"
           icon={Icons.SiFirebase}
           href="https://www.prismic.io/"
+        />
+        <LanguagesDefinition
+          ariaLabel="adobe-photoshop"
+          icon={Icons.SiAdobephotoshop}
+          href="https://www.adobe.com/products/photoshop.html"
         />
       </Box>
     </>

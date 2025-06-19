@@ -15,46 +15,88 @@ import {
   VStack,
 } from '@chakra-ui/react'
 import React, { useState } from 'react'
+import { motion } from 'framer-motion'
+
+const MotionBox = motion(Box)
 
 export default function ContactPage() {
+  const [name, setName] = useState('')
+  const [phone, setPhone] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+  const [isLoading, setIsLoading] = useState(false)
+
   const toast = useToast()
+
+  const validateEmail = (email: string) =>
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+
+    if (!name || !phone || !email || !message) {
+      toast({
+        title: 'Por favor, preencha todos os campos obrigatórios.',
+        status: 'warning',
+        duration: 3000,
+        isClosable: true,
+      })
+      return
+    }
+
+    if (!validateEmail(email)) {
+      toast({
+        title: 'Email inválido.',
+        description: 'Digite um e-mail válido para contato.',
+        status: 'error',
+        duration: 3000,
+        isClosable: true,
+      })
+      return
+    }
+
+    setIsLoading(true)
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, phone, email, message }),
+      })
+
+      if (response.ok) {
+        toast({
+          title: 'Mensagem enviada!',
+          description: 'Entrarei em contato em breve.',
+          status: 'success',
+          duration: 3000,
+          isClosable: true,
+        })
+        setName('')
+        setPhone('')
+        setEmail('')
+        setMessage('')
+      } else {
+        throw new Error()
+      }
+    } catch (err) {
+      toast({
+        title: 'Erro ao enviar mensagem.',
+        description: 'Tente novamente mais tarde.',
+        status: 'error',
+        duration: 3000,
+        isClosable: true,
+      })
+    } finally {
+      setIsLoading(false)
+    }
+  }
 
   const textColor = useColorModeValue('gray.800', 'gray.100')
   const subtitleColor = useColorModeValue('gray.600', 'gray.400')
   const colorBg = useColorModeValue('gray.100', 'gray.900')
-
-  const [isLoading, setIsLoading] = useState(false)
-  const [formData, setFormData] = useState({
-    name: '',
-    telefone: '',
-    email: '',
-    message: '',
-  })
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value })
-  }
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsLoading(true)
-
-    setTimeout(() => {
-      setIsLoading(false)
-      toast({
-        title: 'Mensagem enviada!',
-        description: 'Obrigado por entrar em contato.',
-        status: 'success',
-        duration: 3000,
-        isClosable: true,
-        position: 'top',
-      })
-
-      setFormData({ name: '', telefone: '', email: '', message: '' })
-    }, 1000)
-  }
 
   return (
     <Box minH="100vh" py={{ base: 12, md: 20 }} bg={colorBg} id="contato">
@@ -76,7 +118,7 @@ export default function ContactPage() {
             </Text>
           </Box>
 
-          <Box
+          <MotionBox
             as="form"
             bg="gray.100"
             color="gray.900"
@@ -86,6 +128,9 @@ export default function ContactPage() {
             border="1px solid"
             borderColor="gray.900"
             onSubmit={handleSubmit}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
           >
             <VStack spacing={5}>
               <FormControl isRequired>
@@ -93,8 +138,8 @@ export default function ContactPage() {
                 <Input
                   name="name"
                   placeholder="Seu nome"
-                  value={formData.name}
-                  onChange={handleChange}
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                   borderColor="gray.900"
                   _placeholder={{ color: 'gray.800' }}
                   _hover={{ borderColor: 'gray.900' }}
@@ -105,11 +150,10 @@ export default function ContactPage() {
               <FormControl isRequired>
                 <FormLabel>Telefone</FormLabel>
                 <Input
-                  name="telefone"
+                  name="phone"
                   placeholder="(00) 00000-0000"
-                  value={formData.telefone}
-                  onChange={handleChange}
-                  // bg="gray.100"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
                   borderColor="gray.900"
                   _placeholder={{ color: 'gray.800' }}
                   _hover={{ borderColor: 'gray.900' }}
@@ -123,8 +167,8 @@ export default function ContactPage() {
                   name="email"
                   type="email"
                   placeholder="seu@email.com"
-                  value={formData.email}
-                  onChange={handleChange}
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   borderColor="gray.900"
                   _placeholder={{ color: 'gray.800' }}
                   _hover={{ borderColor: 'gray.900' }}
@@ -138,8 +182,8 @@ export default function ContactPage() {
                   name="message"
                   placeholder="Escreva sua mensagem..."
                   rows={5}
-                  value={formData.message}
-                  onChange={handleChange}
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                   borderColor="gray.900"
                   _placeholder={{ color: 'gray.800' }}
                   _hover={{ borderColor: 'gray.900' }}
@@ -162,7 +206,7 @@ export default function ContactPage() {
                 Enviar mensagem
               </Button>
             </VStack>
-          </Box>
+          </MotionBox>
         </VStack>
       </Container>
     </Box>

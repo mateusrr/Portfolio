@@ -28,7 +28,7 @@ export const Skills = () => {
       gap={{ base: '', md: '2' }}
     >
       <Box>
-        <TextSkills w={{ base: '80px', md: '150px' }}>Tecnologias</TextSkills>
+        <TextSkills w={{ base: '100px', md: '150px' }}>Tecnologias</TextSkills>
         <Languages />
       </Box>
     </SimpleGrid>
