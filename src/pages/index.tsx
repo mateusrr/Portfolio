@@ -112,8 +112,8 @@ export default function Home({ projects }: ProjectProps) {
           {/* Texto */}
           <Flex
             direction="column"
-            align={{ base: 'center', md: 'flex-start' }}
-            textAlign={{ base: 'center', md: 'left' }}
+            align={{ base: 'center', md: 'center' }}
+            textAlign={{ base: 'center', md: 'center' }}
           >
             <Heading
               as="h1"

@@ -13,6 +13,7 @@ import {
   useColorModeValue,
   useToast,
   VStack,
+  VisuallyHidden,
 } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
@@ -31,7 +32,7 @@ export default function ContactPage() {
   const validateEmail = (email: string) =>
     /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
     if (!name || !phone || !email || !message) {
@@ -58,30 +59,42 @@ export default function ContactPage() {
     setIsLoading(true)
 
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
+      // Envio AJAX para o FormSubmit
+      const res = await fetch(
+        `https://formsubmit.co/ajax/${process.env.NEXT_PUBLIC_FORMSUBMIT_EMAIL}`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify({
+            name,
+            phone,
+            email, // FormSubmit usa como Reply-To automaticamente
+            message,
+            _subject: 'Novo contato pelo site',
+            _template: 'table',
+            _captcha: 'false', // opcional
+            _honey: '', // honeypot vazio
+          }),
         },
-        body: JSON.stringify({ name, phone, email, message }),
-      })
+      )
 
-      if (response.ok) {
-        toast({
-          title: 'Mensagem enviada!',
-          description: 'Entrarei em contato em breve.',
-          status: 'success',
-          duration: 3000,
-          isClosable: true,
-        })
-        setName('')
-        setPhone('')
-        setEmail('')
-        setMessage('')
-      } else {
-        throw new Error()
-      }
-    } catch (err) {
+      if (!res.ok) throw new Error('Falha no envio')
+
+      toast({
+        title: 'Mensagem enviada!',
+        description: 'Entrarei em contato em breve.',
+        status: 'success',
+        duration: 3000,
+        isClosable: true,
+      })
+      setName('')
+      setPhone('')
+      setEmail('')
+      setMessage('')
+    } catch {
       toast({
         title: 'Erro ao enviar mensagem.',
         description: 'Tente novamente mais tarde.',
@@ -120,6 +133,9 @@ export default function ContactPage() {
 
           <MotionBox
             as="form"
+            // Progressive enhancement: se JS falhar, ainda envia pelo FormSubmit normal.
+            action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_FORMSUBMIT_EMAIL}`}
+            method="POST"
             bg="gray.100"
             color="gray.900"
             p={{ base: 8, md: 10 }}
@@ -132,6 +148,23 @@ export default function ContactPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
           >
+            {/* Hidden fields para fallback não-AJAX */}
+            <input
+              type="hidden"
+              name="_subject"
+              value="Novo contato pelo site"
+            />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <VisuallyHidden>
+              <input
+                type="text"
+                name="_honey"
+                tabIndex={-1}
+                autoComplete="off"
+              />
+            </VisuallyHidden>
+
             <VStack spacing={5}>
               <FormControl isRequired>
                 <FormLabel>Nome</FormLabel>
